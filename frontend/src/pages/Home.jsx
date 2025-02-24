@@ -8,6 +8,7 @@ import School from '../components/School'
 import Testimonials from '../components/Testimonial'
 import Gallary from '../components/Gallary'
 import OurVideos from '../components/OurVideos'
+import Apply from '../components/Apply'
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <School /> 
       <OurVideos />
       <Testimonials />
+      <Apply />
       <Footer />
      
      
