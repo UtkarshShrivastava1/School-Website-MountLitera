@@ -6,16 +6,8 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 pt-20 pb-10">
       <div className="container mx-auto px-10">
-        {/* Top Section with Logo */}
-        {/* <div className="flex justify-center mb-8">
-          <div className="w-64">
             <img 
-              src=""
-              alt="Al Khaleej International School Logo" 
-              className="w-full"
-            />
-          </div>
-        </div> */}
+        
 
         {/* Main Navigation */}
         <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
