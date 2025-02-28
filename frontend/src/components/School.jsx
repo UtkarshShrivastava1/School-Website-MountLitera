@@ -35,9 +35,11 @@ const CommunityVoices = () => {
   return (
     <div className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-6 py-8">
-        <h1 className="text-center text-[2.5rem] font-serif text-[#8B1D24] mb-12">
-        Academic Levels & Classes
-        </h1>
+      <div className="flex items-center justify-center mb-10">
+        <div className="w-1/4 h-px bg-gray-300"></div>
+        <h2 className="text-3xl md:text-4xl font-serif text-red-800 px-6">Academic Levels & Classes</h2>
+        <div className="w-1/4 h-px bg-gray-300"></div>
+      </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
           {sections.map((section, index) => (

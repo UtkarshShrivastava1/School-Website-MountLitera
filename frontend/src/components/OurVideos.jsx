@@ -1,10 +1,10 @@
 const OurVideos = () => {
     return (
-      <section className="py-10 bg-gray-100">
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4 text-center">
         <div className="flex items-center justify-center mb-10">
         <div className="w-1/4 h-px bg-gray-300"></div>
-        <h2 className="text-3xl md:text-4xl font-serif text-red-800 px-6">Latest News</h2>
+        <h2 className="text-3xl md:text-4xl font-serif text-red-800 px-6">Our Videos</h2>
         <div className="w-1/4 h-px bg-gray-300"></div>
       </div>
           <div className="grid md:grid-cols-2 gap-6">

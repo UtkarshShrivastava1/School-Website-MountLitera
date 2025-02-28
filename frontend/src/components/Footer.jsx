@@ -4,8 +4,8 @@ import Logo from '../assets/Logo.jpg'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 pt-8 pb-4">
-      <div className="container mx-auto px-4">
+    <footer className="bg-gray-100 pt-20 pb-10">
+      <div className="container mx-auto px-10">
         {/* Top Section with Logo */}
         {/* <div className="flex justify-center mb-8">
           <div className="w-64">

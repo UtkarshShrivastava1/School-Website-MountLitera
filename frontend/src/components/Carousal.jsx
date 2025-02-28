@@ -90,7 +90,7 @@ const WelcomeCarousel = () => {
                 {/* Small Title */}
                 <div className="overflow-hidden mb-5">
                   <h2 className="text-emerald-400 text-5xl font-medium tracking-wide transform transition-transform duration-500">
-                    {slide.title}
+                    {/* {slide.title} */}
                   </h2>
                 </div>
                 

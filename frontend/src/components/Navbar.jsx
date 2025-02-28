@@ -23,13 +23,13 @@ const Navbar = () => {
       
       
       {/* Top Navbar - Burgundy Background */}
-      <div className="bg-red-900 text-white">
-        <div className="container mx-auto px-4 flex justify-between items-center py-4">
+      <div className="bg-red-900 text-white py-3 px-4 md:px-8">
+        <div className="container mx-auto flex justify-between items-center">
           {/* Logo and Title */}
           <div className="flex items-center space-x-3">
-            <div className="h-12 w-12 flex items-center justify-center">
-              <img src={Logo} alt="Sidwell Friends Logo" className="h-full w-auto" />
-            </div>
+            {/* <div className="h-12 w-12 flex items-center justify-center"> */}
+              <img src={Logo} alt="Sidwell Friends Logo" className=" w-15 h-full rounded-full bg-white" />
+            {/* </div> */}
             <div className="hidden md:block">
               <h1 className="text-2xl md:text-3xl font-serif">Mount Litera Zee School Bilaspur</h1>
               <p className="text-sm text-gray-200">CBSE Affiliation No :  3330519</p>
@@ -78,7 +78,7 @@ const Navbar = () => {
                 <span className="text-xs text-yellow-200 mt-1">CALENDAR</span>
                 
                 {/* Calendar Dropdown */}
-                {activeDropdown === 'calendar' && (
+                {/* {activeDropdown === 'calendar' && (
                   <div className="absolute top-16 bg-white text-gray-800 shadow-md rounded p-4 z-10 w-48">
                     <ul>
                       <li className="py-1 hover:text-red-900">Academic Calendar</li>
@@ -87,7 +87,7 @@ const Navbar = () => {
                       <li className="py-1 hover:text-red-900">Important Dates</li>
                     </ul>
                   </div>
-                )}
+                )} */}
               </div>
               
               {/* Directory Icon */}
@@ -100,7 +100,7 @@ const Navbar = () => {
                 <span className="text-xs text-yellow-200 mt-1">ADMISSION</span>
                 
                 {/* Directory Dropdown */}
-                {activeDropdown === 'directory' && (
+                {/* {activeDropdown === 'directory' && (
                   <div className="absolute top-16 bg-white text-gray-800 shadow-md rounded p-4 z-10 w-48">
                     <ul>
                       <li className="py-1 hover:text-red-900">Faculty</li>
@@ -109,27 +109,27 @@ const Navbar = () => {
                       <li className="py-1 hover:text-red-900">Board Members</li>
                     </ul>
                   </div>
-                )}
+                )} */}
               </div>
             </div>
             
            
             
             {/* Mobile Menu Toggle */}
-            <div className="md:hidden cursor-pointer">
+            {/* <div className="md:hidden cursor-pointer">
               <button onClick={toggleMenu}>
                 {isOpen ? <X size={24} className="text-yellow-200" /> : <Menu size={24} className="text-yellow-200" />}
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
       {/* Bottom Navbar - White Background */}
-      <div className="bg-white shadow-md">
-        <div className="container mx-auto px-4">
+      {/* <div className="bg-white shadow-md">
+        <div className="container mx-auto px-4"> */}
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex justify-between">
+          {/* <nav className="hidden md:flex justify-between">
             <div className="text-red-900 font-medium py-4 px-3 hover:bg-gray-100">ABOUT</div>
             <div className="text-gray-700 font-medium py-4 px-3 hover:bg-gray-100">ADMISSIONS</div>
             <div className="text-gray-700 font-medium py-4 px-3 hover:bg-gray-100">ACADEMICS</div>
@@ -140,7 +140,7 @@ const Navbar = () => {
             <div className="text-gray-700 font-medium py-4 px-3 hover:bg-gray-100">QUICKLINKS</div>
           </nav>
         </div>
-      </div>
+      </div> */}
 
       {/* Mobile Menu */}
       {isOpen && (
@@ -163,14 +163,14 @@ const Navbar = () => {
             </div>
             
             {/* Main Navigation */}
-            <div className="text-red-900 font-medium py-3 border-b">ABOUT</div>
+            {/* <div className="text-red-900 font-medium py-3 border-b">ABOUT</div>
             <div className="text-gray-700 font-medium py-3 border-b">ADMISSIONS</div>
             <div className="text-gray-700 font-medium py-3 border-b">ACADEMICS</div>
             <div className="text-gray-700 font-medium py-3 border-b">ARTS</div>
             <div className="text-gray-700 font-medium py-3 border-b">ATHLETICS</div>
             <div className="text-gray-700 font-medium py-3 border-b">SUPPORT US</div>
             <div className="text-gray-700 font-medium py-3 border-b">STUDENT LIFE</div>
-            <div className="text-gray-700 font-medium py-3">QUICKLINKS</div>
+            <div className="text-gray-700 font-medium py-3">QUICKLINKS</div> */}
           </div>
         </div>
       )}
