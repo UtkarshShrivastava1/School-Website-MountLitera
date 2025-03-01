@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from '../../components/Heder'
+import Footer from '../../components/Footer'
 
 const HouseSystem = () => {
   return (
-    <div>HouseSystem</div>
+    <>
+    <Header />
+    <Footer />
+    </>
   )
 }
 

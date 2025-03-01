@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 pt-20 pb-10">
       <div className="container mx-auto px-10">
-            <img 
         
 
         {/* Main Navigation */}

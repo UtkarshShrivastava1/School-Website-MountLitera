@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from '../../components/Heder'
+import Footer from '../../components/Footer'
 
 const ParentVisitingHours = () => {
   return (
-    <div>ParentVisitingHours</div>
+    <>
+    <Header />
+    <Footer />
+    </>
   )
 }
 

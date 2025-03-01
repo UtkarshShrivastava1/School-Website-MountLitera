@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from '../../components/Heder'
+import Footer from '../../components/Footer'
 
 const Gallery = () => {
   return (
-    <div>Gallery</div>
+    <>
+    <Header />
+    <Footer />
+    </>
   )
 }
 
