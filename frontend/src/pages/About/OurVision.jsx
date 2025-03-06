@@ -1,12 +1,14 @@
 import React from 'react'
-import Header from '../../components/Heder'
-import Footer from '../../components/Footer'
+
+import Vision from '../../components/AboutUs/Vision'
+
 
 const OurVision = () => {
   return (
     <>
-    <Header />
-    <Footer />
+    
+    <Vision />
+    
     </>
   )
 }

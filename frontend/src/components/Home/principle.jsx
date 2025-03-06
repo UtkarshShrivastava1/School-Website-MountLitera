@@ -1,5 +1,5 @@
 import React from 'react';
-import image4 from '../assets/c-4.png';
+import image4 from '../../assets/c-4.png';
 
 const PrincipalWelcome = () => {
   return (

@@ -43,11 +43,14 @@ import Contact from './pages/contact/ContectUs';
 import Careers from './pages/contact/Careers';
 import OurLocation from './pages/contact/OurLocation';  
 import MandatoryDisclosure from './pages/MandatoryDisclosure/MandatoryDisclosure';
+import Navbar from './components/Home/Navbar';
+import Footer from './components/Home/Footer';
 
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/our-school" element={<OurSchool />} />
@@ -94,6 +97,7 @@ function App() {
         <Route path="/mandatory-disclosure" element={<MandatoryDisclosure />} />
         {/* Add more routes as needed */}
       </Routes>
+      <Footer />
     </Router>
   );
 }

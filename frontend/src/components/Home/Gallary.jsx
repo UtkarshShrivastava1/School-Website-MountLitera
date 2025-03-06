@@ -1,8 +1,9 @@
 import React from 'react';
-import image1 from '../assets/c-1.png';
-import image2 from '../assets/c-2.png';
-import image3 from '../assets/c-3.png';
-import image4 from '../assets/c-4.png';
+import image1 from '../../assets/c-1.png';
+import image2 from '../../assets/c-2.png';
+import image3 from '../../assets/c-3.png';
+import image4 from '../../assets/c-4.png';
+
 
 const ClassroomGallery = () => {
   return (

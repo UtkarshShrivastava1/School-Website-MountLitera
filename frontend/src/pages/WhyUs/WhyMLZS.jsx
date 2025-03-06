@@ -1,12 +1,13 @@
 import React from 'react'
-import Header from '../../components/Heder'
-import Footer from '../../components/Footer'
+
+import WhyMlZS from '../../components/WhyMlzs/Why'
 
 const WhyMLZS = () => {
   return (
     <>
-    <Header />
-    <Footer />
+    
+    <WhyMlZS />
+    
     </>
   )
 }

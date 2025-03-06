@@ -1,207 +1,92 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-const SchoolPage = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hover, setHover] = useState(false);
-  
-  useEffect(() => {
-    // Trigger initial animation after component mounts
-    setTimeout(() => setIsLoaded(true), 100);
-  }, []);
-  
-  const timingData = [
-    { department: "School Office Hours", timing: "9:00AM TO 3:00PM" },
-    { department: "PrePrimary Timing", timing: "9:00AM TO 12:00PM" },
-    { department: "Primary Timing", timing: "9:00 TO 3:00PM" },
-    // { department: "Secondary Timing", timing: "8:30AM TO 3:30PM" },
-    // { department: "Computer Lab", timing: "10:00AM TO 4:00PM" },
-    // { department: "Library Hours", timing: "9:00AM TO 4:00PM" }
+const SchoolTimings = () => {
+  const timingsSections = [
+    {
+      title: 'School Office Hours',
+      timing: '9:00AM TO 3:00PM',
+      colorClass: 'bg-blue-50 text-blue-600 border-blue-200',
+      iconClass: 'text-blue-500'
+    },
+    {
+      title: 'Pre-Primary Timing',
+      timing: '9:00AM TO 12:00PM',
+      colorClass: 'bg-green-50 text-green-600 border-green-200',
+      iconClass: 'text-green-500'
+    },
+    {
+      title: 'Primary Timing',
+      timing: '9:00AM TO 3:00PM',
+      colorClass: 'bg-purple-50 text-purple-600 border-purple-200',
+      iconClass: 'text-purple-500'
+    }
   ];
-  
+
   return (
-    <div className="w-full max-w-4xl mx-auto p-4 font-sans">
-      {/* Animated Logo */}
-      <div className="flex justify-center mb-8">
-        <div 
-          className="relative"
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-        >
-          {/* SVG Logo with animations */}
-          <svg 
-            width="180" 
-            height="180" 
-            viewBox="0 0 240 240" 
-            className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
-          >
-            {/* Background Circle */}
-            <circle 
-              cx="120" 
-              cy="120" 
-              r="110" 
-              fill="#4338ca" 
-              className={`transition-all duration-500 ${hover ? 'opacity-90' : 'opacity-100'}`} 
-            />
-            
-            {/* Outer Ring */}
-            <circle 
-              cx="120" 
-              cy="120" 
-              r="100" 
-              fill="none" 
-              stroke="#ffffff" 
-              strokeWidth="4" 
-              strokeDasharray="628" 
-              strokeDashoffset={isLoaded ? "0" : "628"} 
-              className="transition-all duration-1500 ease-out" 
-            />
-            
-            {/* Book Shape */}
-            <g 
-              className={`transition-transform duration-500 ${hover ? 'scale-110' : 'scale-100'}`} 
-              style={{ transformOrigin: 'center', transformBox: 'fill-box' }}
-            >
-              {/* Book Cover */}
-              <rect 
-                x="80" 
-                y="70" 
-                width="80" 
-                height="100" 
-                rx="4" 
-                fill="#ffffff" 
-                className={`transition-all duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-                style={{ transitionDelay: '200ms' }} 
-              />
-              
-              {/* Book Spine */}
-              <rect 
-                x="75" 
-                y="70" 
-                width="10" 
-                height="100" 
-                rx="2" 
-                fill="#f0f9ff" 
-                className={`transition-all duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-                style={{ transitionDelay: '300ms' }} 
-              />
-              
-              {/* Book Pages */}
-              <path 
-                d="M80,70 Q120,85 160,70 V170 Q120,155 80,170 Z" 
-                fill="#f0f9ff" 
-                stroke="#e0e7ff" 
-                strokeWidth="1"
-                className={`transition-all duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-                style={{ transitionDelay: '400ms' }} 
-              />
-            </g>
-            
-            {/* Pencil */}
-            <g 
-              className={`transition-all duration-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{ transitionDelay: '600ms' }}
-            >
-              <rect 
-                x="130" 
-                y="100" 
-                width="60" 
-                height="8" 
-                rx="2" 
-                fill="#fde68a" 
-                transform="rotate(45, 140, 120)" 
-                className={`transition-transform duration-500 ${hover ? 'translate-x-2' : ''}`}
-              />
-              <polygon 
-                points="183,107 193,117 183,127" 
-                fill="#ef4444" 
-                transform="rotate(45, 140, 120)" 
-                className={`transition-transform duration-500 ${hover ? 'translate-x-2' : ''}`}
-              />
-            </g>
-            
-            {/* Decorative Elements */}
-            {[...Array(8)].map((_, i) => (
-              <circle 
-                key={i} 
-                cx={120 + 90 * Math.cos(i * Math.PI / 4)} 
-                cy={120 + 90 * Math.sin(i * Math.PI / 4)} 
-                r="6" 
-                fill="#ffffff"
-                className={`transition-all duration-700 ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`}
-                style={{ transitionDelay: `${700 + i * 100}ms` }}
-              />
-            ))}
-          </svg>
-        </div>
+    <div className="container mx-auto px-4 py-8">
+      <div className="flex items-center justify-center mb-10">
+        <div className="w-1/4 h-px bg-gray-300"></div>
+        <h2 className="text-3xl md:text-4xl font-serif text-red-800 px-6">School Timing</h2>
+        <div className="w-1/4 h-px bg-gray-300"></div>
       </div>
+      <p className="text-center text-gray-600 mb-8">
+        Please note the following operating hours for different sections of our school.
+      </p>
       
-      {/* School Name */}
-      <div className="text-center mb-8">
-        <h1 
-          className={`text-3xl font-bold text-indigo-800 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          style={{ transitionDelay: '1200ms' }}
-        >
-          ACADEMY PLUS
-        </h1>
-        <p 
-          className={`text-sm font-medium text-indigo-600 mt-2 tracking-wider transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          style={{ transitionDelay: '1400ms' }}
-        >
-          EXCELLENCE IN EDUCATION
-        </p>
-      </div>
-      
-      {/* School Timing Table */}
-      <h2 className={`text-2xl font-bold text-center mb-6 text-indigo-800 transition-all duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-        style={{ transitionDelay: '1600ms' }}>
-        School Timings
-      </h2>
-      
-      <div className={`border border-gray-200 rounded-md overflow-hidden shadow-md transition-all duration-1000 ${isLoaded ? 'opacity-100 transform-none' : 'opacity-0 translate-y-8'}`}
-        style={{ transitionDelay: '1800ms' }}>
-        {/* Header Row */}
-        <div className="bg-red-800 text-white flex">
-          <div className="py-4 px-6 font-semibold text-lg w-1/2 text-center">
-            Class / Department
-          </div>
-          <div className="py-4 px-6 font-semibold text-lg w-1/2 text-center">
-            Timing
-          </div>
-        </div>
-        
-        {/* Data Rows */}
-        {timingData.map((item, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        {timingsSections.map((section, index) => (
           <div 
             key={index} 
-            className={`flex border-t border-gray-200 hover:bg-indigo-50 transition-all duration-300 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
-            style={{ 
-              transitionDelay: `${2000 + index * 100}ms`,
-              opacity: isLoaded ? 1 : 0,
-              transform: isLoaded ? 'translateX(0)' : 'translateX(-20px)'
-            }}
+            className={`
+              ${section.colorClass} 
+              border rounded-lg 
+              p-6 
+              text-center 
+              shadow-sm 
+              transition-all 
+              duration-300 
+              hover:shadow-md
+            `}
           >
-            <div className="py-4 px-6 w-1/2 text-center text-red-800 font-medium">
-              {item.department}
+            <div className="flex justify-center items-center mb-4">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className={`h-8 w-8 ${section.iconClass}`} 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" 
+                />
+              </svg>
             </div>
-            <div className="py-4 px-6 w-1/2 text-center">
-              {item.timing}
-            </div>
+            
+            <h2 className="text-lg font-semibold mb-2">{section.title}</h2>
+            <p className="font-bold text-xl">{section.timing}</p>
           </div>
         ))}
       </div>
-      
-      <div 
-        className="text-center mt-6 text-gray-600 text-sm"
-        style={{ 
-          transitionDelay: '2600ms',
-          opacity: isLoaded ? 1 : 0,
-          transition: 'opacity 700ms ease-in-out'
-        }}
-      >
-        * School gates open 30 minutes before the start time
+
+      {/* Important Notice Section */}
+      <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 flex items-center justify-between">
+        <div>
+          <h3 className="text-lg font-bold text-yellow-700 mb-2">Important Notice</h3>
+          <p className="text-yellow-600">
+            Students should arrive at least 15 minutes before their scheduled start time.
+          </p>
+        </div>
+        {/* <button 
+          className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors duration-300"
+        >
+          Contact Administration
+        </button> */}
       </div>
     </div>
   );
 };
 
-export default SchoolPage;
+export default SchoolTimings;

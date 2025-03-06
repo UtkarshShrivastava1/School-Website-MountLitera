@@ -1,19 +1,15 @@
-import React from 'react'
-import Header from '../../components/Heder'
-import Footer from '../../components/Footer'
-import ContactForm from '../../components/contact/ContactForm'
+import React from "react";
 
-
-
+import ContactForm from "../../components/contact/ContactForm";
+import Location from "../../components/contact/ContactUs";
 
 const ContectUs = () => {
   return (
     <>
-        <Header />
-        <ContactForm />
-        <Footer />
+      <ContactForm />
+      <Location />
     </>
-  )
-}
+  );
+};
 
-export default ContectUs
+export default ContectUs;
