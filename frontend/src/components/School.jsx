@@ -8,79 +8,104 @@ const CommunityVoices = () => {
   const sections = [
     {
       title: "Primary School",
-      imgSrc: image1,
+      imgSrc:"https://images.pexels.com/photos/5530484/pexels-photo-5530484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       alt: "Lower School Students",
-      description: "Experience the joy of early learning in our nurturing Lower School environment where young minds flourish through discovery and play."
+      description: "Experience the joy of early learning in our nurturing Lower School environment where young minds flourish through discovery and play.",
+      class:"Nursery to kg-2"
     },
     {
       title: "Lower School",
-      imgSrc: image2,
+      imgSrc: "https://images.pexels.com/photos/4486783/pexels-photo-4486783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2  ",
       alt: "Middle School Students",
       description: "Our Middle School program empowers students to explore their interests while developing critical thinking and leadership skills."
+    ,
+      class:"1 to 5"
     },
     {
       title: "Middle School",
-      imgSrc: image3,
+      imgSrc: "https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       alt: "Upper School Students",
-      description: "Upper School students engage in rigorous academics, innovative research, and meaningful community engagement."
+      description: "Upper School students engage in rigorous academics, innovative research, and meaningful community engagement.",
+      class:"6 to 8"
     },
     {
       title: "Upper School",
-      imgSrc: image4,
+      imgSrc: "https://images.pexels.com/photos/5212700/pexels-photo-5212700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       alt: "Upper School",
-      description: "Our alumni network continues to make lasting impacts across the globe, carrying forward our values of excellence and service."
+      description: "Our alumni network continues to make lasting impacts across the globe, carrying forward our values of excellence and service.",
+      class:"9 to 12"
     }
   ];
 
   return (
-    <div className="w-full bg-white">
-      <div className="max-w-[1440px] mx-auto px-6 py-8">
-      <div className="flex items-center justify-center mb-10">
-        <div className="w-1/4 h-px bg-gray-300"></div>
-        <h2 className="text-3xl md:text-4xl font-serif text-red-800 px-6">Academic Levels & Classes</h2>
-        <div className="w-1/4 h-px bg-gray-300"></div>
-      </div>
+    <div className="bg-amber-50 min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+        {/* Practice Areas Badge */}
+       
+        
+        {/* Main Heading */}
+        <h1 className="text-4xl md:text-5xl font-serif text-center font-bold text-gray-900 mb-16">
+        Our <span className="text-amber-800"> Educational Programs</span>
+        </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
-          {sections.map((section, index) => (
-            <div 
-              key={index} 
-              className="relative overflow-hidden group h-[400px] cursor-pointer"
-            >
-              {/* Image and gradient overlay */}
-              <div className="absolute inset-0">
-                <img
-                  src={section.imgSrc}
-                  alt={section.alt}
-                  className="w-full h-full object-cover"
-                />
-                {/* Base overlay */}
-                <div className="absolute inset-0 bg-black/40 transition-all duration-500" />
-                
-                {/* Hover overlay with gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
-              </div>
-              
-              {/* Title and content container */}
-              <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
-                {/* Title - stays visible */}
-                <h2 className="text-2xl font-bold tracking-wide z-10">
-                  {section.title}
-                </h2>
-                
-                {/* Description and button - appear on hover */}
-                <div className="transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 space-y-4">
-                  <p className="text-sm leading-relaxed">
-                    {section.description}
-                  </p>
-                  <button className="bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition-colors duration-300 text-sm font-semibold">
-                    Learn More
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* <div className="flex justify-center mb-6">
+        <p className="mt-1 text-lg text-gray-600 max-w-3xl mx-auto">
+            Discover our comprehensive approach to education across all age groups, fostering growth, curiosity, and excellence.
+          </p>
+
+        </div> */}
+        
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  {sections.map((service, index) => (
+    <div key={index} className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col md:flex-row">
+      <div className="p-8 flex-1">
+        <h2 className="text-2xl font-serif font-bold text-gray-800 mb-3">
+          {service.title}
+        </h2>
+        <p className="text-gray-600 mb-2">
+          {service.description}
+        </p>
+        <div className="flex items-center space-x-2 mb-6">  
+          <label className="text-gray-600 text-lg font-bold">Class:</label>
+          <p className="text-gray-600 text-md font-bold">
+            {service.class}
+          </p>
         </div>
+        
+        <a 
+          href="#" 
+          className="inline-flex items-center text-yellow-500 font-medium hover:text-amber-600"
+        >
+          Learn More
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            className="h-4 w-4 ml-1" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M14 5l7 7m0 0l-7 7m7-7H3" 
+            />
+          </svg>
+        </a>
+      </div>
+      <div className="md:w-2/5 relative">
+        <div className="w-full h-full overflow-hidden rounded-r-lg">
+          <img 
+            src={service.imgSrc}
+            alt={service.alt}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
       </div>
     </div>
   );
