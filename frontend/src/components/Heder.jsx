@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X, Calendar, Bell, User } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/Logo.jpg';
+import {  School, MessageCircle, NotebookText, Scale ,Eye,ShieldMinus} from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,13 +32,13 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'Our School', link: '/our-school' },
-        { name: 'Mount Litera Zee Schools', link: '/mount-litera-zee-schools' },
-        { name: 'Our Mission', link: '/our-mission' },
-        { name: 'Our Vision', link: '/our-vision' },
-        { name: 'Director Message', link: '/director-message' },
-        { name: 'Principal Message', link: '/principal-message' },
-        { name: 'Value Education', link: '/value-education' },
+        { name: 'Our School', link: '/our-school',icon:   <School />, },
+        { name: 'Mount Litera Zee Schools', link: '/mount-litera-zee-schools',icon:   <School /> },
+        { name: 'Our Mission', link: '/our-mission',icon:   <ShieldMinus/> },
+        { name: 'Our Vision', link: '/our-vision',icon:<Eye/>  },
+        { name: 'Director Message', link: '/director-message' ,icon:<MessageCircle/>},
+        { name: 'Principal Message', link: '/principal-message' ,icon:<MessageCircle/>},
+        { name: 'Value Education', link: '/value-education' ,icon:<MessageCircle/>},
       ]
     },
     { 
@@ -57,8 +58,8 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'Guidelines & Procedures', link: '/guidelines-procedures' },
-        { name: 'School Rules & Regulations', link: '/school-rules-regulations' },
+        { name: 'Guidelines & Procedures', link: '/guidelines-procedures' ,icon:<NotebookText/>},
+        { name: 'School Rules & Regulations', link: '/school-rules-regulations',icon:<Scale/> },
         { name: 'Withdrawal Policy', link: '/withdrawal-policy' },
         { name: 'Enquiry Form', link: '/enquiry-form' },
       ]
@@ -82,7 +83,7 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'School Calendar', link: '/school-calendar' },
+        { name: 'School Calendar', link: '/school-calendar',},
         { name: 'Fee Structure', link: '/fee-structure' },
         { name: 'Gallery', link: '/gallery' },
         { name: 'News & Events', link: '/news-events' },
@@ -198,21 +199,39 @@ const Navbar = () => {
                   </button>
                   
                   {/* Desktop Hover Dropdown */}
-                  {item.dropdown && (
-                    <div className="absolute left-0 mt-2 w-64 bg-gray-800 rounded-none shadow-lg invisible group-hover:visible transition-all duration-300 opacity-0 group-hover:opacity-100 z-50">
+                  {/* {item.dropdown && (
+                    <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg invisible group-hover:visible transition-all duration-300 opacity-0 group-hover:opacity-100 z-50 flex flex-col items-center">
                       <div className="py-2">
                         {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                           <button 
                             key={dropdownIndex} 
                             onClick={() => handleNavigation(dropdownItem.link)}
-                            className="block px-6 py-3 transition-colors duration-200 text-white hover:text-gray-200 border-b border-gray-700 hover:bg-gray-700"
-                          >
+                            className="w-full block px-6 py-3 transition-colors duration-200 text-black hover:text-black border-b 1px border-gray-700 hover:bg-gray-100  align-middle"
+                          >{dropdownItem.icon}
                             {dropdownItem.name}
                           </button>
                         ))}
                       </div>
                     </div>
-                  )}
+                  )} */}
+
+{item.dropdown && (
+  <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg invisible group-hover:visible transition-all duration-300 opacity-0 group-hover:opacity-100 z-50 flex flex-col ">
+    <div className="py-2 w-full flex flex-col items-center">
+      {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
+        <button 
+          key={dropdownIndex} 
+          onClick={() => handleNavigation(dropdownItem.link)}
+          className="w-full px-6 py-3 flex items-center justify-self-start gap-2 text-black hover:text-black border-b border-gray-700 hover:bg-gray-100 transition-colors duration-200"
+    >
+          {dropdownItem.icon}
+          {dropdownItem.name}
+        </button>
+      ))}
+    </div>
+  </div>
+)}
+
                 </div>
               ))}
             </div>
