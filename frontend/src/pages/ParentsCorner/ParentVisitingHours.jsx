@@ -1,12 +1,13 @@
 import React from 'react'
+import ParentVisitingHours from '../../components/ParentsCorner/ParentVisitingHours'
 
 
-const ParentVisitingHours = () => {
+const ParentVisiting = () => {
   return (
     <>
-    
+    <ParentVisitingHours />
     </>
   )
 }
 
-export default ParentVisitingHours
+export default ParentVisiting
