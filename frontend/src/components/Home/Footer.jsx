@@ -26,7 +26,7 @@ const Footer = () => {
               <img 
                 src={Logo}
                 alt="GEMS Education Logo" 
-                className="w-20 "
+                className="w-20 rounded-full "
               />
               <p className="text-sm mt-2">
                 We see <span className="font-semibold">genius</span> in every child
