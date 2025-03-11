@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const multer = require("multer");
-const Notice = require("../models/Notice");
+const { addNotice, getAllNotices } = require("../controllers/NoticeController");
 
 // Configure Multer for file uploads
 const storage = multer.diskStorage({
@@ -14,28 +14,9 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-// Add a notice with file upload
-router.post("/add", upload.single("file"), async (req, res) => {
-  try {
-    const { title, description, date } = req.body;
-    const fileUrl = req.file ? `/uploads/${req.file.filename}` : null;
-
-    const newNotice = new Notice({ title, description, date, fileUrl });
-    await newNotice.save();
-    res.status(201).json({ message: "Notice added successfully", notice: newNotice });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// Get all notices
-router.get("/", async (req, res) => {
-  try {
-    const notices = await Notice.find().sort({ date: -1 });
-    res.status(200).json(notices);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
+// Routes
+router.post("/add", upload.single("file"), addNotice);
+router.get("/", getAllNotices);
 
 module.exports = router;
+

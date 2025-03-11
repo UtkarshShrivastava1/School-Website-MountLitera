@@ -22,3 +22,13 @@ exports.getEventByDate = async (req, res) => {
       res.status(500).json({ error: error.message });
     }
   };
+
+  // Get all events
+exports.getAllEvents = async (req, res) => {
+  try {
+    const events = await Event.find().sort({ date: 1 }); // Sorting by date (earliest first)
+    res.status(200).json(events);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
