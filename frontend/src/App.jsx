@@ -45,6 +45,7 @@ import OurLocation from './pages/contact/OurLocation';
 import MandatoryDisclosure from './pages/MandatoryDisclosure/MandatoryDisclosure';
 import Navbar from './components/Home/Navbar';
 import Footer from './components/Home/Footer';
+import AdminLogin from './pages/Admin/AdminLogin';
 
 
 function App() {
@@ -95,6 +96,7 @@ function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/our-location" element={<OurLocation />} />
         <Route path="/mandatory-disclosure" element={<MandatoryDisclosure />} />
+        <Route path="/admin-login" element={<AdminLogin />} />
         {/* Add more routes as needed */}
       </Routes>
       <Footer />
