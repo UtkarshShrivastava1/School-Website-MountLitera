@@ -102,6 +102,8 @@ Pincode- 495001.</span>
             <a href="#" className="text-gray-600 hover:text-blue-700">Privacy Policy</a>
             <span className="text-gray-400">•</span>
             <a href="#" className="text-gray-600 hover:text-blue-700">Terms & Conditions</a>
+            <span className="text-gray-400">•</span>
+            <a href="/admin-login" className="text-gray-600 hover:text-blue-700">Admin</a>
           </div>
           <div className="text-gray-500">
             Copyright © 2024 All rights reserved.
