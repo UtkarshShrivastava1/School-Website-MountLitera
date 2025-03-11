@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import OurSchool from './pages/About/OurSchool';
 import MountLiteraZeeSchools from './pages/About/MountLiteraZeeSchools';
@@ -47,11 +47,21 @@ import Navbar from './components/Home/Navbar';
 import Footer from './components/Home/Footer';
 import AdminLogin from './pages/Admin/AdminLogin';
 
-
 function App() {
   return (
     <Router>
-      <Navbar />
+      <AppContent />
+    </Router>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith('/admin');
+
+  return (
+    <>
+      {!isAdminRoute && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/our-school" element={<OurSchool />} />
@@ -99,8 +109,8 @@ function App() {
         <Route path="/admin-login" element={<AdminLogin />} />
         {/* Add more routes as needed */}
       </Routes>
-      <Footer />
-    </Router>
+      {!isAdminRoute && <Footer />}
+    </>
   );
 }
 
