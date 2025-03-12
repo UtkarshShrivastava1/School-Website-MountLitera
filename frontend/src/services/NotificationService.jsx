@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:3000/api"; // Adjust according to your backend
+const API_BASE_URL = "http://localhost:3000/api";
 
 // Fetch events
 export const getEventByDate = async (date) => {

@@ -41,7 +41,7 @@ import SchoolTiming from './pages/StudentCorner/SchoolTiming';
 import AttendancePolicy from './pages/StudentCorner/AttendancePolicy';
 import Contact from './pages/contact/ContectUs';
 import Careers from './pages/contact/Careers';
-import OurLocation from './pages/contact/OurLocation';  
+import OurLocation from './pages/contact/OurLocation';
 import MandatoryDisclosure from './pages/MandatoryDisclosure/MandatoryDisclosure';
 import Navbar from './components/Home/Navbar';
 import Footer from './components/Home/Footer';
