@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { LogOut} from "lucide-react"
-import EventForm from './NoticeForm';
 import Logo from '../../assets/logo.jpg';
 import { Menu, X, Calendar, Bell, User } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import NoticeForm from './NoticeForm';
+import EventForm from './EventForm';
 
 
 
@@ -114,6 +114,7 @@ function AdminDasboard() {
       </ul>
         </aside>
         <div className='w-[80%] min-h-[80vh]'>
+            {activeItem=== "events" && <EventForm/>}
             {activeItem=== "notice" && <NoticeForm/>}
         </div>
        </section>
