@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:5000/api"; // Adjust according to your backend
+const API_BASE_URL = "http://localhost:3000/api"; // Adjust according to your backend
 
 // Fetch events
 export const getEventByDate = async (date) => {
@@ -21,6 +21,7 @@ export const getNotices = async () => {
 
 // Add notice (with file upload)
 export const addNotice = async (formData) => {
+  console.log(formData);
   const response = await axios.post(`${API_BASE_URL}/notices/add`, formData, {
     headers: { "Content-Type": "multipart/form-data" },
   });

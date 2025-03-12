@@ -1,22 +1,23 @@
-const express = require('express');
-const app = express();
-const dotenv = require('dotenv');
+require("dotenv").config();
+const express = require("express");
 const connectDB = require("./config/db");
-const authController = require('./controllers/authController');
-const { protect } = require('./middleware/auth');
 const cors = require("cors");
-dotenv.config();
+const leaveRoutes = require("./Routes/LeaveRoutes");
+const eventRoutes = require("./Routes/EventRoutes");
+const detailsRoutes = require("./Routes/DetailsRoutes");
+const noticeRoutes = require("./Routes/NoticeRoutes");
+
+const app = express();
+app.use(express.json());
+app.use(cors());
+app.use("/events", eventRoutes);
+app.use("/details", detailsRoutes);
+app.use("/api/leaves", leaveRoutes);
+app.use("/api/notices", noticeRoutes);
+app.use("/uploads", express.static("uploads"));
 
 connectDB();
 
-// Middleware
-app.use(express.json());
-app.use(cors());
+const PORT = process.env.PORT || 5000;
 
-// console.log(process.env.PORT || 5000);
-
-app.post('/api/auth/admin-login', authController.adminLogin);
-
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
-});
+app.listen(PORT, () => console.log(`Server running on port ${PORT}...`));
