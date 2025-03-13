@@ -51,8 +51,10 @@ const NoticeForm = ({ refreshNotices }) => {
       data.append("title", formData.title);
       data.append("description", formData.description);
       data.append("date", formData.date);
+      console.log(data);
       if (file) data.append("file", file);
-      console.log(data.title);
+      
+
     
       // try {
       //   await addNotice(data);

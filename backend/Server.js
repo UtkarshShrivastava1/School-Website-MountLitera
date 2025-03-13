@@ -6,10 +6,12 @@ const leaveRoutes = require("./Routes/LeaveRoutes");
 const eventRoutes = require("./Routes/EventRoutes");
 const detailsRoutes = require("./Routes/DetailsRoutes");
 const noticeRoutes = require("./Routes/NoticeRoutes");
+const authRoutes = require("./Routes/AuthRoutes");
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use("/api/auth", authRoutes);
 app.use("/events", eventRoutes);
 app.use("/details", detailsRoutes);
 app.use("/api/leaves", leaveRoutes);
