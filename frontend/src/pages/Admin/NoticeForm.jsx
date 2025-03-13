@@ -18,28 +18,61 @@ const NoticeForm = ({ refreshNotices }) => {
       setFile(e.target.files[0]);
     };
   
+    // const handleSubmit = async (e) => {
+    //   e.preventDefault();
+    //   console.log("Form data:", formData);
+    //   const data = new FormData();
+    //   data.append("title", formData.title);
+    //   data.append("description", formData.description);
+    //   data.append("date", formData.date);
+    //   if (file) data.append("file", file);
+
+  
+    //   try {
+    //     console.log(data);
+    //     await addNotice(data);
+    //     setMessage("Notice added successfully!");
+    //     setFormData({ title: "", description: "", date: "" });
+    //     setFile(null);
+  
+    //     // Call the refresh function to update notices
+    //     refreshNotices();
+    //   } catch (error) {
+    //     console.error("Error adding notice:", error.message);
+    //     setMessage("Failed to add notice.");
+    //   }
+    // };
+  
+
     const handleSubmit = async (e) => {
       e.preventDefault();
+      // console.log(formData);
       const data = new FormData();
       data.append("title", formData.title);
       data.append("description", formData.description);
       data.append("date", formData.date);
       if (file) data.append("file", file);
-  
-      try {
-        await addNotice(data);
-        setMessage("Notice added successfully!");
-        setFormData({ title: "", description: "", date: "" });
-        setFile(null);
-  
-        // Call the refresh function to update notices
-        refreshNotices();
-      } catch (error) {
-        console.error("Error adding notice:", error);
-        setMessage("Failed to add notice.");
-      }
+      console.log(data.title);
+    
+      // try {
+      //   await addNotice(data);
+      //   setMessage("Notice added successfully!");
+      //   setFormData({ title: "", description: "", date: "" });
+      //   setFile(null);
+    
+      //   // Reset file input
+      //   const fileInput = document.querySelector('input[type="file"]');
+      //   if (fileInput) fileInput.value = "";
+    
+      //   // Call the refresh function to update notices
+      //   refreshNotices();
+      // } catch (error) {
+      //   console.error("Error adding notice:", error);
+      //   // Show more detailed error message
+      //   const errorMsg = error.response?.data?.error || error.message || "Unknown error";
+      //   setMessage(`Failed to add notice: ${errorMsg}`);
+      // }
     };
-  
     return (
       <div className="p-6 bg-white shadow-lg rounded-lg w-[50%] mx-auto mt-3">
         <h2 className="text-xl font-semibold mb-4">Add Notice</h2>

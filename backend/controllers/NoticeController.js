@@ -3,6 +3,7 @@ const Notice = require("../models/Notice");
 // Add a new notice
 exports.addNotice = async (req, res) => {
   try {
+    // console.log(req.body);
     const { title, description, date } = req.body;
     const fileUrl = req.file ? `/uploads/${req.file.filename}` : null;
 
