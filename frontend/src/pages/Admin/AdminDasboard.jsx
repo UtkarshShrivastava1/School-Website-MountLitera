@@ -5,6 +5,7 @@ import { Menu, X, Calendar, Bell, User } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import NoticeForm from './NoticeForm';
 import EventForm from './EventForm';
+import GalleryForm from './GalleryForm';
 
 
 
@@ -97,8 +98,8 @@ function AdminDasboard() {
                 <span className="text-xs text-yellow-600 mt-1">LogOut</span>
               </div>
         </nav>
-       <section className='flex'>
-       <aside className='w-[20%] h-[80vh] bg-red-900 rounded-md py-4'>
+       <section className='flex h-[74.6vh] '>
+       <aside className='w-[20%]  bg-red-900 rounded-md py-4'>
         <ul className="space-y-2">
         {menuItems.map((item) => (
           <li
@@ -113,9 +114,10 @@ function AdminDasboard() {
         ))}
       </ul>
         </aside>
-        <div className='w-[80%] min-h-[80vh]'>
+        <div className='w-[80%]  overflow-hidden overflow-y-auto no-scrollbar'>
             {activeItem=== "events" && <EventForm/>}
             {activeItem=== "notice" && <NoticeForm/>}
+            {activeItem=== "gallery" && <GalleryForm/>}
         </div>
        </section>
     </>
