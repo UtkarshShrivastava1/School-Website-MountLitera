@@ -4,6 +4,7 @@ import React from 'react'
 import { Eye, EyeOff, LogIn } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function AdminLogin() {
 
@@ -20,7 +21,7 @@ function AdminLogin() {
     setError("");
 
     try {
-      const response = await axios.post("/api/auth/admin-login", {
+      const response = await axios.post("http://localhost:3000/api/auth/admin-login", {
         username,
         password,
       });
@@ -29,7 +30,8 @@ function AdminLogin() {
       localStorage.setItem("adminUsername", username);
       
       // Redirect to admin dashboard
-      router.push("/admin/dashboard");
+      alert("Login successful");
+      router("/admin/dashboard");
     } catch (err) {
       console.error("Login error:", err);
       setError(
