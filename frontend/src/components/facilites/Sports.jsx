@@ -9,7 +9,12 @@ import swimming from '../../assets/swimming.jpg';
 const SportsFacilities = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-center mb-4">Sports Facilities</h1>
+      {/* <h1 className="text-4xl font-bold text-center mb-4">Sports Facilities</h1> */}
+      <div className="flex items-center justify-center mb-10">
+        <div className="w-1/4 h-px bg-gray-300"></div>
+        <h2 className="text-3xl md:text-4xl font-serif text-red-800 px-6">Sports Facilities</h2>
+        <div className="w-1/4 h-px bg-gray-300"></div>
+      </div>
       
       <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
         Our comprehensive sports infrastructure promotes physical fitness, teamwork, and healthy
