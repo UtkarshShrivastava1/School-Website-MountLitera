@@ -122,7 +122,7 @@ const Navbar = () => {
   return (
     <div className="w-full">
       {/* Top Navbar - Burgundy Background */}
-      <div className="bg-red-900 text-white py-3 px-4 md:px-8">
+      <div className="bg-blue-600 text-white py-3 px-4 md:px-8">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo and Title */}
           <div className="flex items-center space-x-3">
