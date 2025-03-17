@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import NoticeForm from './NoticeForm';
 import EventForm from './EventForm';
 import GalleryForm from './GalleryForm';
+import HolidayForm from './HolidayForm';
 
 
 
@@ -31,7 +32,7 @@ function AdminDasboard() {
   };
     const [activeItem, setActiveItem] = useState("events");
   
-  const menuItems = ["events", "notice", "gallery"];
+  const menuItems = ["events", "notice", "gallery","holidays"];
 
     const handlelogout =()=>{
         localStorage.clear();
@@ -98,7 +99,7 @@ function AdminDasboard() {
                 <span className="text-xs text-yellow-600 mt-1">LogOut</span>
               </div>
         </nav>
-       <section className='flex h-[74.6vh] '>
+       <section className='flex h-[77.6vh] '>
        <aside className='w-[20%]  bg-red-900 rounded-md py-4'>
         <ul className="space-y-2">
         {menuItems.map((item) => (
@@ -118,6 +119,7 @@ function AdminDasboard() {
             {activeItem=== "events" && <EventForm/>}
             {activeItem=== "notice" && <NoticeForm/>}
             {activeItem=== "gallery" && <GalleryForm/>}
+            {activeItem=== "holidays" && <HolidayForm/>}
         </div>
        </section>
     </>

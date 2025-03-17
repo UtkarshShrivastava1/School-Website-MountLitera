@@ -41,7 +41,7 @@ import SchoolTiming from './pages/StudentCorner/SchoolTiming';
 import AttendancePolicy from './pages/StudentCorner/AttendancePolicy';
 import Contact from './pages/contact/ContectUs';
 import Careers from './pages/contact/Careers';
-import OurLocation from './pages/contact/OurLocation';  
+import OurLocation from './pages/contact/OurLocation';
 import MandatoryDisclosure from './pages/MandatoryDisclosure/MandatoryDisclosure';
 import Navbar from './components/Home/Navbar';
 import Footer from './components/Home/Footer';
@@ -109,6 +109,8 @@ function AppContent() {
         <Route path="/mandatory-disclosure" element={<MandatoryDisclosure />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDasboard />} />
+        <Route path="/school-calendar" element={<SchoolCalendar />} />
+        <Route path="/school-notifications" element={<SchoolNotification />} />
         {/* Add more routes as needed */}
       </Routes>
       {!isAdminRoute && <Footer />}

@@ -1,6 +1,6 @@
 const Notice = require("../models/Notice");
 
-// Add a new notice
+//  Add a new notice
 exports.addNotice = async (req, res) => {
   try {
     // console.log(req.body);
@@ -15,7 +15,7 @@ exports.addNotice = async (req, res) => {
   }
 };
 
-// Get all notices
+//  Get all notices
 exports.getAllNotices = async (req, res) => {
   try {
     const notices = await Notice.find().sort({ date: -1 });
