@@ -31,7 +31,7 @@ const Navbar = () => {
               <img src={Logo} alt="Sidwell Friends Logo" className=" w-15 h-full rounded-full bg-white" />
             {/* </div> */}
             <div className="hidden md:block">
-              <h1 className="text-2xl md:text-3xl font-serif">Mount Litera Zee School Bilaspur</h1>
+              <h1 className="text-4xl md:text-3xl font-serif">Mount Litera Zee School Bilaspur</h1>
               <p className="text-sm text-gray-200">CBSE Affiliation No :  3330519</p>
             </div>
           </div>

@@ -1,67 +1,76 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import summerUnifrom from "../../assets/Summer_uniform.jpg";
+import winterUniform from "../../assets/Winter_uniform.jpg";
+import sportUnifrom from "../../assets/Sport_uniform.jpg";
+import React, { useState } from 'react';
 
-const uniforms = {
-  sports: [
-    { id: 1, name: "Sports T-Shirt", img: "/sports-tshirt.jpg" },
-    { id: 2, name: "Sports Shorts", img: "/sports-shorts.jpg" },
-  ],
-  winter: [
-    { id: 3, name: "Winter Jacket", img: "/winter-jacket.jpg" },
-    { id: 4, name: "Woolen Pants", img: "/woolen-pants.jpg" },
-  ],
-  summer: [
-    { id: 5, name: "Summer Shirt", img: "/summer-shirt.jpg" },
-    { id: 6, name: "Cotton Shorts", img: "/cotton-shorts.jpg" },
-  ],
-};
+const UniformGuidelines = () => {
+  const [activeTab, setActiveTab] = useState(null);
 
-function SchoolUniformPage() {
-  const [category, setCategory] = useState("sports");
+  const uniformTypes = [
+    { 
+      id: 'sports', 
+      name: 'Sports Uniform', 
+      icon: '🏅',
+      image: sportUnifrom
+    },
+    { 
+      id: 'summer', 
+      name: 'Summer Uniform', 
+      icon: '☀️',
+      image: summerUnifrom
+    },
+    { 
+      id: 'winter', 
+      name: 'Winter Uniform', 
+      icon: '❄️',
+      image: winterUniform
+    },
+    
+  ];
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center p-5">
-      {/* Logo Section */}
-      <motion.img
-        src="/school-logo.png"
-        alt="School Logo"
-        className="w-20 h-20 mb-5"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
-      />
-      
-      <h1 className="text-3xl font-bold mb-4">School Uniforms</h1>
-      
-      {/* Category Buttons */}
-      <div className="flex space-x-4 mb-6">
-        {Object.keys(uniforms).map((cat) => (
+    <div className="container mx-auto px-4 py-12">
+     <div className="flex items-center justify-center mb-10">
+        <div className="w-1/4 h-px bg-gray-300"></div>
+        <h2 className="text-3xl md:text-4xl font-serif text-red-800 px-6">School Unifrom</h2>
+        <div className="w-1/4 h-px bg-gray-300"></div>
+      </div>
+      <p className="text-center text-gray-600 mb-8">
+        Our school uniform represents our values and creates a sense of community. 
+        Students are expected to wear the appropriate uniform based on the season and activity.
+      </p>
+
+      {/* Tabs */}
+      <div className="flex justify-center space-x-4 mb-8">
+        {uniformTypes.map((uniform) => (
           <button
-            key={cat}
-            className={`px-4 py-2 rounded-lg ${category === cat ? "bg-blue-600 text-white" : "bg-gray-300"}`}
-            onClick={() => setCategory(cat)}
+            key={uniform.id}
+            onClick={() => setActiveTab(uniform.id)}
+            className={`
+              flex items-center space-x-2 px-4 py-2 rounded-lg transition-all cursor-pointer duration-300
+              ${activeTab === uniform.id 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}
+            `}
           >
-            {cat.charAt(0).toUpperCase() + cat.slice(1)}
+            <span className="text-xl">{uniform.icon}</span>
+            <span>{uniform.name}</span>
           </button>
         ))}
       </div>
 
-      {/* Uniform Display */}
-      <motion.div 
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        {uniforms[category].map((item) => (
-          <div key={item.id} className="p-4 shadow-lg rounded-lg bg-white text-center">
-            <img src={item.img} alt={item.name} className="w-full h-40 object-cover rounded-lg" />
-            <p className="mt-2 font-semibold">{item.name}</p>
-          </div>
-        ))}
-      </motion.div>
+      {/* Uniform Image Display */}
+      {activeTab && (
+        <div className="max-w-4xl mx-auto">
+          <img 
+            src={uniformTypes.find(u => u.id === activeTab).image}
+            alt={`${activeTab} uniform`}
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
+      )}
     </div>
   );
-}
+};
 
-export default SchoolUniformPage;
+export default UniformGuidelines;

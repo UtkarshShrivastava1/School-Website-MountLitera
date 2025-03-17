@@ -1,7 +1,48 @@
-import React from 'react';
+import React , { useEffect, useState, useRef } from 'react';
 import Image from '../assets/c-4.png';
-
+const statsData = [
+  { label: 'Students', value: 1200 },
+  { label: 'Teachers', value: 120 },
+  { label: 'Courses', value: 60 },
+  { label: 'Awards', value: 250 },
+];
 const SchoolHeroSection = () => {
+  const [counts, setCounts] = useState(statsData.map(() => 0));
+  const statsRef = useRef(null);
+  const observer = useRef(null);
+
+  useEffect(() => {
+    
+    observer.current = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          statsData.forEach((stat, index) => {
+            let start = 0;
+            const end = stat.value;
+            const duration = 2000; 
+            const stepTime = Math.abs(Math.floor(duration / end));
+            
+            const timer = setInterval(() => {
+              start += 1;
+              setCounts((prev) => {
+                const newCounts = [...prev];
+                newCounts[index] = start;
+                return newCounts;
+              });
+
+              if (start === end) clearInterval(timer);
+            }, stepTime);
+          });
+          observer.current.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (statsRef.current) {
+      observer.current.observe(statsRef.current);
+    }
+    return () => observer.current && observer.current.disconnect();
+  }, []);
   return (
     <div className="relative min-h-screen">
       {/* Background Image with Overlay */}
@@ -11,7 +52,7 @@ const SchoolHeroSection = () => {
           alt="School campus background" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-blue-900/40"></div>
+        <div className="absolute inset-0 bg-gray-900/40"></div>
       </div>
       
       {/* Decorative Elements */}
@@ -111,16 +152,11 @@ const SchoolHeroSection = () => {
       </div>
       
       {/* Floating Stats Bar */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 md:mt-0">
+      <div ref={statsRef} className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 md:mt-0">
         <div className="bg-white rounded-xl shadow-xl p-6 backdrop-blur-lg grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { label: 'Students', value: '1,200+' },
-            { label: 'Teachers', value: '120' },
-            { label: 'Courses', value: '60+' },
-            { label: 'Awards', value: '250+' }
-          ].map((stat, index) => (
+         { statsData.map((stat, index) => (
             <div key={index} className="text-center">
-              <p className="text-3xl font-bold text-blue-600">{stat.value}</p>
+              <p className="text-3xl font-bold text-blue-600">{counts[index]}+</p>
               <p className="text-gray-500">{stat.label}</p>
             </div>
           ))}

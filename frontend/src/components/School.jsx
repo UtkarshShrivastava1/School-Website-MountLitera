@@ -44,8 +44,14 @@ const CommunityVoices = () => {
        
         
         {/* Main Heading */}
+         {/* Heading with decorative lines */}
+      <div className="flex items-center justify-center mb-10">
+        <div className="w-1/4 h-px bg-gray-300"></div>
+        <h2 className="text-3xl md:text-4xl font-serif text-Black px-6">Our <span className="text-amber-800"> Educational Programs</span></h2>
+        <div className="w-1/4 h-px bg-gray-300"></div>
+      </div>
         <h1 className="text-4xl md:text-5xl font-serif text-center font-bold text-gray-900 mb-16">
-        Our <span className="text-amber-800"> Educational Programs</span>
+ 
         </h1>
 
         {/* <div className="flex justify-center mb-6">
@@ -75,7 +81,7 @@ const CommunityVoices = () => {
         
         <a 
           href="#" 
-          className="inline-flex items-center text-yellow-500 font-medium hover:text-amber-600"
+          className="inline-flex items-center text-red-700 font-medium hover:text-amber-600"
         >
           Learn More
           <svg 

@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { cn } from "@/components/utils"
 
-export const Gallary = ({ cards }) => {
+export const Gallery = ({ cards }) => {
   const [selected, setSelected] = useState(null)
   const [lastSelected, setLastSelected] = useState(null)
 
@@ -19,8 +19,14 @@ export const Gallary = ({ cards }) => {
 
   return (
     <div >
-      
-   <h1 className="text-4xl font-bold text-center">Our <span className="text-amber-800"> Gallary</span></h1>
+       {/* Heading with decorative lines */}
+       <div className="flex items-center justify-center mb-10">
+        <div className="w-1/4 h-px bg-gray-300"></div>
+        <h2 className="text-3xl md:text-4xl font-serif text-black px-6">Our<span className="text-red-800"> Gallery</span> </h2>
+        <div className="w-1/4 h-px bg-gray-300"></div>
+      </div>
+
+
  <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>

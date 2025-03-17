@@ -5,13 +5,13 @@ const SchoolTourSection = () => {
   const [isHoveredBook, setIsHoveredBook] = useState(false);
 
   return (
-    <div className="w-full bg-red-800 text-white py-16 px-4 relative overflow-hidden">
+    <div className="w-full bg-gradient-to-r from-white to-red-100 text-white py-16 px-4 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-24 h-24 bg-red-600 rounded-full opacity-30 transform -translate-x-12 -translate-y-12"></div>
       <div className="absolute bottom-0 right-0 w-32 h-32 bg-red-600 rounded-full opacity-30 transform translate-x-16 translate-y-16"></div>
       <div className="absolute top-1/4 right-10 w-16 h-16 bg-red-600 rounded-full opacity-20"></div>
       
-      <div className="max-w-4xl mx-auto flex flex-col items-center text-center relative z-10">
+      <div className="max-w-4xl mx-auto flex flex-col items-center text-center relative z-10 text-gray-700">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 transform transition-transform duration-700 hover:scale-105">
           Book a School Tour
         </h2>
@@ -22,7 +22,7 @@ const SchoolTourSection = () => {
         
         <div className="flex flex-col sm:flex-row gap-6">
           <button 
-            className={`relative overflow-hidden bg-white text-red-700 px-8 py-4 font-medium rounded shadow-lg transform transition-all duration-300 ${
+            className={`relative overflow-hidden bg-white text-yellow-600 px-8 py-4 font-medium rounded shadow-lg transform transition-all duration-300 ${
               isHoveredApply ? 'scale-105 shadow-xl' : ''
             }`}
             onMouseEnter={() => setIsHoveredApply(true)}
@@ -38,7 +38,7 @@ const SchoolTourSection = () => {
           
           <button 
             className={`relative overflow-hidden border-2 border-white px-8 py-4 rounded shadow-lg flex items-center justify-center space-x-3 transition-all duration-300 ${
-              isHoveredBook ? 'bg-white text-red-700 shadow-xl transform scale-105' : ''
+              isHoveredBook ? 'bg-white text-gray-500 shadow-xl transform scale-105' : ''
             }`}
             onMouseEnter={() => setIsHoveredBook(true)}
             onMouseLeave={() => setIsHoveredBook(false)}

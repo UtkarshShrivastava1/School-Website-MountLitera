@@ -4,27 +4,27 @@ const DirectorsMessagePage = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
       {/* Hero Section with Director's Photo */}
-      <div className="relative bg-gradient-to-r from-blue-800 to-blue-900 py-24">
+      <div className="relative bg-gradient-to-r from-gray-100 to-amber-50 py-24">
         <div className="absolute inset-0 opacity-10">
           <div className="w-full h-full bg-[url('/api/placeholder/1920/600')] bg-cover bg-center"></div>
         </div>
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 text-white mb-10 md:mb-0">
+            <div className="md:w-1/2 text-gray-700 mb-10 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Director's Message</h1>
               <div className="h-1 w-20 bg-yellow-400 mb-6"></div>
-              <p className="text-xl text-blue-100">Words of wisdom and vision from our leader</p>
+              <p className="text-xl text-gray-400">Words of wisdom and vision from our leader</p>
             </div>
             <div className="md:w-1/2 flex justify-center md:justify-end">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-70 rounded-full"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-red-100 to-transparent opacity-30 rounded-full"></div>
                 <img 
                   src="http://mlzsbilaspur.com/assets/images/director.jpeg" 
                   alt="Dr. Sanjana Tiwari" 
                   className="rounded-full h-64 w-64 object-cover border-4 border-white shadow-xl"
                 />
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white py-2 px-6 rounded-full shadow-lg">
-                  <p className="text-blue-800 font-bold">Since 2014</p>
+                  <p className="text-red-800  font-bold">Since 2014</p>
                 </div>
               </div>
             </div>
@@ -38,14 +38,14 @@ const DirectorsMessagePage = () => {
           {/* Director's Information Card */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-16 transform -translate-y-16">
             <div className="bg-blue-50 p-8 text-center">
-              <h2 className="text-3xl font-bold text-blue-800">Dr. Sanjana Tiwari</h2>
-              <p className="text-blue-600 text-lg mt-2">Director, MLZS Bilaspur</p>
+              <h2 className="text-3xl font-bold text-red-800 ">Dr. Sanjana Tiwari</h2>
+              <p className="text-red-600  text-lg mt-2">Director, MLZS Bilaspur</p>
             </div>
             <div className="p-8 text-center">
               <blockquote className="italic text-xl text-gray-700 mb-4">
                 "An Investment in knowledge pays the best interest"
               </blockquote>
-              <div className="h-0.5 w-20 bg-blue-500 mx-auto"></div>
+              <div className="h-0.5 w-20 bg-red-800 mx-auto"></div>
             </div>
           </div>
           
@@ -59,22 +59,22 @@ const DirectorsMessagePage = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-600">
-                <h3 className="text-xl font-bold text-blue-800 mb-4">Our Campus</h3>
+              <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-red-800">
+                <h3 className="text-xl font-bold text-red-800  mb-4">Our Campus</h3>
                 <p className="text-gray-700">
                   The ambience of the school is away from the hustle and bustle of city life and is congenial for academics. The school is equipped with world class ultra modern learning facilities. The classrooms are fully Air conditioned, spacious and equipped with all modern facilities of smart classes.
                 </p>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-600">
-                <h3 className="text-xl font-bold text-blue-800 mb-4">Our Philosophy</h3>
+              <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-red-800">
+                <h3 className="text-xl font-bold text-red-800  mb-4">Our Philosophy</h3>
                 <p className="text-gray-700">
                   At Mount Litera Zee School, Bilaspur we believe that every child has a right to live in calm, orderly, safe and secure environment essential for development to fullest potential. As a progressive, learning centric co-educational school we provide all necessary facilities for overall development of students.
                 </p>
               </div>
             </div>
             
-            <div className="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-500 flex items-start">
+            <div className="bg-blue-50 p-8 rounded-lg border-l-4 border-red-700 flex items-start">
               <div className="text-4xl text-blue-500 mr-4">💡</div>
               <div>
                 <p className="text-gray-800 mb-2">
@@ -85,7 +85,7 @@ const DirectorsMessagePage = () => {
                     <img src="http://mlzsbilaspur.com/assets/images/director.jpeg" alt="Signature" className="rounded-full" />
                   </div>
                   <div className="ml-4">
-                    <p className="font-bold text-blue-800">Dr. Sanjana Tiwari</p>
+                    <p className="font-bold text-red-800 ">Dr. Sanjana Tiwari</p>
                     <p className="text-sm text-gray-600">Director, Mount Litera Zee School Bilaspur</p>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ const DirectorsMessagePage = () => {
             ].map((item, index) => (
               <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                 <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
-                  <h3 className="text-xl font-bold text-blue-800">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-red-800 ">{item.title}</h3>
                   <p className="text-gray-700 mt-2">{item.description}</p>
                 </div>
                 

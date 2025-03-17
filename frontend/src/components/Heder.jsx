@@ -121,16 +121,16 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       {/* Top Navbar - Burgundy Background */}
-      <div className="bg-red-900 text-white py-3 px-4 md:px-8">
+      <div className="bg-gradient-to-r from-red-700 to-[#800000] text-white py-3 px-4 md:px-8">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo and Title */}
           <div className="flex items-center space-x-3">
             <img src={Logo} alt="School Logo" className="w-15 h-full rounded-full bg-white" />
             <div className="hidden md:block">
-              <h1 className="text-2xl md:text-3xl font-serif">Mount Litera Zee School Bilaspur</h1>
-              <p className="text-sm text-gray-200">CBSE Affiliation No: 3330519</p>
+              <h1 className="text-2xl md:text-3xl font-serif ">Mount Litera Zee School Bilaspur</h1>
+              <p className="text-sm ">CBSE Affiliation No: 3330519</p>
             </div>
           </div>
           
@@ -187,11 +187,11 @@ const Navbar = () => {
                   <button 
                     onClick={() => !item.dropdown && handleNavigation(item.link)}
                     className="inline-flex items-center px-2 py-2 text-sm font-medium transition-colors duration-200 
-                      text-gray-800 hover:text-blue-700 hover:bg-gray-100 rounded uppercase"
+                      text-gray-800 hover:text-red-700 hover:bg-gray-100 rounded uppercase cursor-pointer"
                   >
                     {item.name}
                     {item.dropdown && (
-                      <svg className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:transform group-hover:rotate-180" 
+                      <svg className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:transform group-hover:rotate-180 cursor-pointer" 
                         fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
@@ -216,13 +216,13 @@ const Navbar = () => {
                   )} */}
 
 {item.dropdown && (
-  <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg invisible group-hover:visible transition-all duration-300 opacity-0 group-hover:opacity-100 z-50 flex flex-col ">
+  <div className="absolute left-0 mt-2 w-70 bg-white rounded-lg shadow-lg invisible group-hover:visible transition-all duration-300 opacity-0 group-hover:opacity-100 z-50 flex flex-col  cursor-pointer ">
     <div className="py-2 w-full flex flex-col items-center">
       {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
         <button 
           key={dropdownIndex} 
           onClick={() => handleNavigation(dropdownItem.link)}
-          className="w-full px-6 py-3 flex items-center justify-self-start gap-2 text-black hover:text-black border-b border-gray-700 hover:bg-gray-100 transition-colors duration-200"
+          className="w-full px-6 py-3 flex items-center justify-self-start gap-2 text-black hover:text-red-700 border-b border-gray-700 hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
     >
           {dropdownItem.icon}
           {dropdownItem.name}
@@ -282,12 +282,12 @@ const Navbar = () => {
                   
                   {/* Mobile Dropdown */}
                   {item.dropdown && activeDropdown === index && (
-                    <div className="bg-gray-800 py-2">
+                    <div className="bg-white py-2">
                       {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                         <button
                           key={dropdownIndex}
                           onClick={() => handleNavigation(dropdownItem.link)}
-                          className="block px-4 py-3 text-sm text-white hover:text-gray-200 hover:bg-gray-700 border-b border-gray-700"
+                          className="w-full block px-4 py-3 text-sm text-black hover:text-black hover:bg-gray-200 border-b border-gray-700"
                         >
                           {dropdownItem.name}
                         </button>

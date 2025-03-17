@@ -1,16 +1,17 @@
 import React from 'react'
 import Footer from '../../components/Footer'
 import Header from '../../components/Heder'
-// import News from '../../components/News'
-// import Carousel from '../../components/Carousal'
-// import School from '../../components/School'
-// import Testimonials from '../../components/Testimonial'
-import {Gallary} from '../../components/Gallary'
-// import OurVideos from '../../components/OurVideos'
-// import Apply from '../../components/Apply'
-// import Welcome from '../../components/Welcome'
-// import Principle from '../../components/principle'
-import WhyChooseUs from "../../components/WhyChooseUS";
+import News from '../../components/News'
+import Carousel from '../../components/Carousal'
+import School from '../../components/School'
+// import AnimatedTestimonials from '../../components/AnimatedTestimonials'
+import {Gallery} from '../../components/Gallery'
+import OurVideos from '../../components/OurVideos'
+import Apply from '../../components/Apply'
+import Welcome from '../../components/Welcome'
+import Principle from '../../components/principle'
+// import WhyChooseUs from "../../components/WhyChooseUS";
+import Testimonial from '../../components/Testimonial'
 
 
 const Home = () => {
@@ -47,16 +48,16 @@ const Home = () => {
        {/* <Navbar /> */}
       
        <Header />
-      {/* <Carousel />
+      <Carousel />
       <Welcome />
       <Principle />
       <News />  
-      <Gallary cards={cards} />*/}
-      {/* <OurVideos /> */}
-    {/*   <School /> 
-      <Testimonials />
-      <Apply />*/}
-      <WhyChooseUs/>
+      <Gallery cards={cards} />
+     <OurVideos />
+        <School /> 
+      <Testimonial />
+      <Apply />
+      {/* <WhyChooseUs/> */}
       <Footer /> 
      
      

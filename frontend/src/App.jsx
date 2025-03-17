@@ -38,7 +38,7 @@ import GuidelinesForParents from './pages/ParentsCorner/GuidelinesForParents';
 import StudentGuidelines from './pages/StudentCorner/StudentGuidelines';
 import SchoolUniform from './pages/StudentCorner/SchoolUniform';
 import SchoolTiming from './pages/StudentCorner/SchoolTiming';
-import AttendancePolicy from './pages/StudentCorner/AttendancePolicy';
+import AttendancePolicyS from './pages/StudentCorner/AttendancePolicyS';
 import Contact from './pages/contact/ContectUs';
 import Careers from './pages/contact/Careers';
 import OurLocation from './pages/contact/OurLocation';  
@@ -87,7 +87,7 @@ function App() {
         <Route path="/student-guidelines" element={<StudentGuidelines />} />
         <Route path="/school-uniform" element={<SchoolUniform />} />
         <Route path="/school-timing" element={<SchoolTiming />} />
-        <Route path="/attendance-policy" element={<AttendancePolicy />} />
+        <Route path="/attendance-policy" element={<AttendancePolicyS />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/our-location" element={<OurLocation />} />

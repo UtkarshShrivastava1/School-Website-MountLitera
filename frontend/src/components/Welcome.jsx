@@ -22,7 +22,7 @@ const WelcomeBanner = () => {
         }`}
       >
         <span className="text-black">Welcome to </span>
-        <span className="text-red-800 hover:text-blue-500 transition-colors duration-300">Mount Litera Zee School</span>
+        <span className="text-red-700 hover:text-red-800 transition-colors duration-300">Mount Litera Zee School</span>
       </h1>
       
       <p 
@@ -40,7 +40,7 @@ const WelcomeBanner = () => {
         }`}
       >
         <button 
-          className={`bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-all duration-300 transform ${isHovered1 ? 'scale-105 shadow-lg' : ''}`}
+          className={`bg-gradient-to-r from-red-700 to-red-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-all duration-300 transform ${isHovered1 ? 'scale-105 shadow-lg' : ''}`}
           onMouseEnter={() => setIsHovered1(true)}
           onMouseLeave={() => setIsHovered1(false)}
         >
@@ -49,7 +49,7 @@ const WelcomeBanner = () => {
         </button>
         
         <button 
-          className={`bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-md font-medium transition-all duration-300 ${isHovered2 ? 'shadow-lg' : ''}`}
+          className={`bg-transparent border border-red-600 text-gray-600 hover:bg-blue-50 px-6 py-3 rounded-md font-medium transition-all duration-300 ${isHovered2 ? 'shadow-lg' : ''}`}
           onMouseEnter={() => setIsHovered2(true)}
           onMouseLeave={() => setIsHovered2(false)}
         >

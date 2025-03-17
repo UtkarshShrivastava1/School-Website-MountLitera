@@ -38,7 +38,7 @@ const NewsSection = () => {
               <div key={index} className="pb-4 border-b border-gray-200 last:border-none">
                 <a 
                   href="#" 
-                  className="block text-lg font-medium text-orange-600 hover:text-orange-800 transition-colors"
+                  className="block text-lg font-medium text-gray-600 hover:text-orange-800 transition-colors"
                 >
                   {title}
                 </a>
