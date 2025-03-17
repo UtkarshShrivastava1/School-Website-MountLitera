@@ -14,7 +14,7 @@ function HolidayForm() {
     setMessage(""); 
 
     try {
-      await axios.post("http://localhost:3000/api/leaves/apply", { title, description, date });
+      await axios.post("http://localhost:5000/api/leaves/apply", { title, description, date });
       setMessage("Holiday added successfully!");
       setTitle("");
       setDescription("");
