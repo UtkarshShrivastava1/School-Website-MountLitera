@@ -3,8 +3,8 @@ const Leave = require("../models/Leave");
 // Apply for leave
 exports.applyLeave = async (req, res) => {
   try {
-    const { userId, name, role, date, reason } = req.body;
-    const newLeave = new Leave({ userId, name, role, date, reason });
+    const { title, description, date } = req.body;
+    const newLeave = new Leave({ title, description, date });
     await newLeave.save();
     res.status(201).json({ message: "Leave applied successfully", leave: newLeave });
   } catch (error) {
