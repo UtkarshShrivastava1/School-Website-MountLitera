@@ -106,8 +106,8 @@ const SchoolCalendar = () => {
             </div>
           ) : leave ? (
             <div className="mt-2">
-              <h4 className="text-xl font-bold text-red-500">Leave: {leave.name}</h4>
-              <p className="text-gray-600">{leave.reason}</p>
+              <h4 className="text-xl font-bold text-red-500">{leave.title}</h4>
+              <p className="text-gray-600">{leave.description}</p>
             </div>
           ) : (
             <p className="text-gray-400 mt-2">💡 Thought of the day: {getRandomThought()}</p>

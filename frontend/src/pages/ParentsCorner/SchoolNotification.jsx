@@ -50,9 +50,13 @@ const SchoolNotification = () => {
                   <strong>{notice.title}</strong> - {new Date(notice.date).toDateString()}
                   <p>{notice.description}</p>
                   {notice.fileUrl && (
-                    <a href={notice.fileUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-                      View Attachment
-                    </a>
+                    <a
+                    href={`http://localhost:5000${notice.fileUrl}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:underline">
+                    View Attachment
+                  </a>
                   )}
                 </li>
               ))}
