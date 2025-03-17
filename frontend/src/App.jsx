@@ -46,6 +46,7 @@ import MandatoryDisclosure from './pages/MandatoryDisclosure/MandatoryDisclosure
 import Navbar from './components/Home/Navbar';
 import Footer from './components/Home/Footer';
 import AdminLogin from './pages/Admin/AdminLogin';
+import AdminDasboard from './pages/Admin/AdminDasboard';
 
 function App() {
   return (
@@ -107,6 +108,7 @@ function AppContent() {
         <Route path="/our-location" element={<OurLocation />} />
         <Route path="/mandatory-disclosure" element={<MandatoryDisclosure />} />
         <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminDasboard />} />
         {/* Add more routes as needed */}
       </Routes>
       {!isAdminRoute && <Footer />}
