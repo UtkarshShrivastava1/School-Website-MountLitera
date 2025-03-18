@@ -50,11 +50,11 @@ const VisitingHoursPage = () => {
           
           <div className="flex flex-wrap gap-4">
             <button className="flex items-center bg-slate-900 text-white px-4 py-2 rounded-md
-              hover:bg-blue-700 transform hover:scale-105 transition-all duration-300">
+              hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 cursor-pointer">
               Schedule Appointment
             </button>
             <button className="flex items-center border border-slate-300 px-4 py-2 rounded-md
-              hover:bg-slate-100 transform hover:scale-105 transition-all duration-300">
+              hover:bg-slate-100 transform hover:scale-105 transition-all duration-300 cursor-pointer">
               <Phone className="w-5 h-5 mr-2" />
               Contact Us
             </button>
@@ -108,7 +108,7 @@ const VisitingHoursPage = () => {
         <div className="grid grid-cols-3 mb-6 rounded-t-lg overflow-hidden">
           <button 
             onClick={() => setActiveTab('principal')}
-            className={`py-3 text-center font-medium transition-all duration-300 ${
+            className={`py-3 text-center font-medium transition-all duration-300 cursor-pointer ${
               activeTab === 'principal' 
                 ? 'bg-white border-b-2 border-blue-600 text-blue-800' 
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -118,7 +118,7 @@ const VisitingHoursPage = () => {
           </button>
           <button 
             onClick={() => setActiveTab('coordinator')}
-            className={`py-3 text-center font-medium transition-all duration-300 ${
+            className={`py-3 text-center font-medium transition-all duration-300 cursor-pointer ${
               activeTab === 'coordinator' 
                 ? 'bg-white border-b-2 border-blue-600 text-blue-800' 
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -128,7 +128,7 @@ const VisitingHoursPage = () => {
           </button>
           <button 
             onClick={() => setActiveTab('administration')}
-            className={`py-3 text-center font-medium transition-all duration-300 ${
+            className={`py-3 text-center font-medium transition-all duration-300 cursor-pointer ${
               activeTab === 'administration' 
                 ? 'bg-white border-b-2 border-blue-600 text-blue-800' 
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
