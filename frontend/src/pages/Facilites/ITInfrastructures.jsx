@@ -1,16 +1,16 @@
 import React from 'react'
 import Header from '../../components/Heder'
 import Footer from '../../components/Footer'
-import Infrastructure from '../../components/facilites/Infrastrucure'
+import ITInfrastructure from '../../components/Facilities/ITInfrastructure'
 
-const ITInfrastructure = () => {
+const ITInfrastructures = () => {
   return (
     <> 
     <Header />
-    <Infrastructure />
+    <ITInfrastructure />
     <Footer />
     </>
   )
 }
 
-export default ITInfrastructure
+export default ITInfrastructures

@@ -21,9 +21,11 @@ import OurCampus from './pages/Facilites/OurCampus';
 import HiTechClasses from './pages/Facilites/HiTechClasses';
 import Faculty from './pages/Facilites/Faculty';
 import SecurityCCTVSurveillance from './pages/Facilites/SecurityCCTVSurveillance';
+
 import SportFacilities from './pages/Facilites/SportFacilities';
 import TransportFacilities from './pages/Facilites/TransportFacilities';
-import ITInfrastructure from './pages/Facilites/ITInfrastructure';
+
+import ITInfrastructure from './pages/Facilites/ITInfrastructures';
 import SchoolCalendar from './pages/ParentsCorner/SchoolCalendar';
 import FeeStructure from './pages/ParentsCorner/FeeStructure';
 import Gallery from './pages/ParentsCorner/Gallery';
