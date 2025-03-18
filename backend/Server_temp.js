@@ -1,12 +1,16 @@
 require("dotenv").config();
+
+
 const express = require("express");
 const connectDB = require("./config/db");
 const cors = require("cors");
+const cloudinaryConfig = require('./config/cloudinary'); // Add Cloudinary config import
 const leaveRoutes = require("./Routes/LeaveRoutes");
 const eventRoutes = require("./Routes/EventRoutes");
 const detailsRoutes = require("./Routes/DetailsRoutes");
 const noticeRoutes = require("./Routes/NoticeRoutes");
 const authRoutes = require("./Routes/AuthRoutes");
+const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
 app.use(express.json());
@@ -17,6 +21,10 @@ app.use("/details", detailsRoutes);
 app.use("/api/leaves", leaveRoutes);
 app.use("/api/notices", noticeRoutes);
 app.use("/uploads", express.static("uploads"));
+app.use('/api/posts', require('./Routes/Post')); // Corrected path
+
+// Error handler middleware
+app.use(errorHandler);
 
 connectDB();
 
