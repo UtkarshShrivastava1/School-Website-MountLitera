@@ -19,7 +19,7 @@ const EventForm = () => {
     // setDate('');
 
     try {
-      const response = axios.post('http://localhost:3000/events', eventData);
+      const response = axios.post('http://localhost:5000/events', eventData);
       // console.log(response.data);
       alert('Event created successfully');
       setTitle('');

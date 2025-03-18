@@ -6,6 +6,8 @@ exports.addNotice = async (req, res) => {
     // console.log(req.body);
     const { title, description, date } = req.body;
     const fileUrl = req.file ? `/uploads/${req.file.filename}` : null;
+    console.log("Uploaded file URL:", fileUrl);
+
 
     const newNotice = new Notice({ title, description, date, fileUrl });
     await newNotice.save();
