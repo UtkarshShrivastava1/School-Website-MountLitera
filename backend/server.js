@@ -7,7 +7,6 @@ const eventRoutes = require("./Routes/EventRoutes");
 const detailsRoutes = require("./Routes/DetailsRoutes");
 const noticeRoutes = require("./Routes/NoticeRoutes");
 const authRoutes = require("./Routes/AuthRoutes");
-const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
 app.use(express.json());
@@ -18,15 +17,9 @@ app.use("/details", detailsRoutes);
 app.use("/api/leaves", leaveRoutes);
 app.use("/api/notices", noticeRoutes);
 app.use("/uploads", express.static("uploads"));
-app.use('/api/posts', require('./Routes/postRoutes'));
-
-
-// Error handler middleware
-app.use(errorHandler);
 
 connectDB();
 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}...`));
-
