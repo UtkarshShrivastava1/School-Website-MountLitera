@@ -43,7 +43,7 @@ const SchoolCalendar = () => {
 
       console.log("Fetching data for:", formattedDate);
 
-      const response = await axios.get(`http://localhost:5000/details/${formattedDate}`);
+      const response = await axios.get(`http://localhost:3000/details/${formattedDate}`);
 
       console.log("Response data:", response.data);
 
