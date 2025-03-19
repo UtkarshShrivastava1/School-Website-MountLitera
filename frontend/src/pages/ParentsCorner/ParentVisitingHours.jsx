@@ -3,7 +3,8 @@ import Header from '../../components/Heder'
 import Footer from '../../components/Footer'
 import VisitingHoursPage  from '../../components/ParentsCorner/ParentVisitingHour'
 
-const ParentVisitingHours = () => {
+
+const ParentVisiting = () => {
   return (
     <>
     <Header />
@@ -13,4 +14,4 @@ const ParentVisitingHours = () => {
   )
 }
 
-export default ParentVisitingHours
+export default ParentVisiting

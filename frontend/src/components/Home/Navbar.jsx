@@ -145,13 +145,13 @@ const Navbar = () => {
             {/* Quick Access Icons - Desktop */}
             <div className="hidden md:flex items-center space-x-6">
               {/* News Icon */}
-              <div className="flex flex-col items-center cursor-pointer">
+              <div className="flex flex-col items-center cursor-pointer" onClick={() => handleNavigation('/school-notifications')}>
                 <Bell className="h-5 w-5 text-yellow-200" />
                 <span className="text-xs text-yellow-200 mt-1">NEWS</span>
               </div>
               
               {/* Calendar Icon */}
-              <div className="flex flex-col items-center cursor-pointer">
+              <div className="flex flex-col items-center cursor-pointer" onClick={() => handleNavigation('/school-calendar')}>
                 <Calendar className="h-5 w-5 text-yellow-200" />
                 <span className="text-xs text-yellow-200 mt-1">CALENDAR</span>
               </div>

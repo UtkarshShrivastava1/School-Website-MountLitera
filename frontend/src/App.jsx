@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import OurSchool from './pages/About/OurSchool';
 import MountLiteraZeeSchools from './pages/About/MountLiteraZeeSchools';
@@ -43,13 +43,28 @@ import SchoolTiming from './pages/StudentCorner/SchoolTiming';
 import AttendancePolicyS from './pages/StudentCorner/AttendancePolicyS';
 import Contact from './pages/contact/ContectUs';
 import Careers from './pages/contact/Careers';
-import OurLocation from './pages/contact/OurLocation';  
+import OurLocation from './pages/contact/OurLocation';
 import MandatoryDisclosure from './pages/MandatoryDisclosure/MandatoryDisclosure';
-
+import Navbar from './components/Home/Navbar';
+import Footer from './components/Home/Footer';
+import AdminLogin from './pages/Admin/AdminLogin';
+import AdminDasboard from './pages/Admin/AdminDasboard';
 
 function App() {
   return (
     <Router>
+      <AppContent />
+    </Router>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith('/admin');
+
+  return (
+    <>
+      {!isAdminRoute && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/our-school" element={<OurSchool />} />
@@ -94,9 +109,14 @@ function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/our-location" element={<OurLocation />} />
         <Route path="/mandatory-disclosure" element={<MandatoryDisclosure />} />
+        <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminDasboard />} />
+        <Route path="/school-calendar" element={<SchoolCalendar />} />
+        <Route path="/school-notifications" element={<SchoolNotification />} />
         {/* Add more routes as needed */}
       </Routes>
-    </Router>
+      {!isAdminRoute && <Footer />}
+    </>
   );
 }
 

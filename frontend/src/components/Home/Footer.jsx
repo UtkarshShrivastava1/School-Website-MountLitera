@@ -1,6 +1,6 @@
 import React from 'react';
 import { Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react';
-import Logo from '../assets/Logo.jpg'
+import Logo from '../../assets/logo.jpg';
 
 const Footer = () => {
   return (
@@ -26,7 +26,7 @@ const Footer = () => {
               <img 
                 src={Logo}
                 alt="GEMS Education Logo" 
-                className="w-20 "
+                className="w-20 rounded-full "
               />
               <p className="text-sm mt-2">
                 We see <span className="font-semibold">genius</span> in every child
@@ -102,6 +102,8 @@ Pincode- 495001.</span>
             <a href="#" className="text-gray-600 hover:text-blue-700">Privacy Policy</a>
             <span className="text-gray-400">•</span>
             <a href="#" className="text-gray-600 hover:text-blue-700">Terms & Conditions</a>
+            <span className="text-gray-400">•</span>
+            <a href="/admin-login" className="text-gray-600 hover:text-blue-700">Admin</a>
           </div>
           <div className="text-gray-500">
             Copyright © 2024 All rights reserved.
