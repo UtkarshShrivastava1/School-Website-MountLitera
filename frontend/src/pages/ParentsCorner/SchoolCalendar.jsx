@@ -5,6 +5,8 @@ import "react-calendar/dist/Calendar.css";
 import { useNavigate } from "react-router-dom";
 import { Clock, Calendar as CalendarIcon, BookOpen, User } from "lucide-react";
 
+
+
 const thoughts = [
   "Stay positive, work hard, make it happen! 💪",
   "Every day is a fresh start. 🌅",
@@ -24,6 +26,7 @@ const SchoolCalendar = () => {
   const [loading, setLoading] = useState(true);
   const [currentMonth, setCurrentMonth] = useState(new Date().toLocaleString('default', { month: 'long' }));
   const navigate = useNavigate();
+
 
   useEffect(() => {
     if (selectedDate) {
@@ -90,18 +93,29 @@ const SchoolCalendar = () => {
 
   return (
     <div className="min-h-screen bg-teal-50 text-slate-800">
-     
+      {/* Navbar */}
+      {/* <div className="bg-white border-b border-teal-100 px-4 sm:px-8 py-4 sticky top-0 z-10 shadow-sm">
+        <div className="flex items-center justify-between max-w-7xl mx-auto">
+          <div className="flex items-center gap-3">
+            <CalendarIcon className="text-teal-500" size={24} />
+            <h1 className="text-lg font-medium tracking-tight">EduPlanner</h1>
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="w-8 h-8 bg-amber-400 rounded-full flex items-center justify-center">
+              <User size={16} />
+            </div>
+          </div>
+        </div>
+      </div> */}
 
       <main className="max-w-7xl mx-auto py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
         {/* Header - Centered */}
         <div className="mb-8 sm:mb-12 mt-2 sm:mt-4 text-center">
-        <div className="flex items-center justify-center mb-10">
-        <div className="w-1/4 h-px bg-gray-300"></div>
-        <h2 className="text-3xl md:text-4xl font-serif text-red-800 px-6">Academic Calendar</h2>
-        <div className="w-1/4 h-px bg-gray-300"></div>
-      </div>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-800">
+            Academic Calendar
+          </h2>
           <p className="mt-2 sm:mt-3 text-slate-500 max-w-xl mx-auto">
-          Manage your academic schedule, view important events, and stay inspired with daily thoughts.
+            Track your schedule, manage events, and plan your academic journey
           </p>
         </div>
 
@@ -270,7 +284,7 @@ const SchoolCalendar = () => {
                         
                         <div className="mt-4 pt-4 border-t border-teal-100 flex items-center gap-2 text-sm text-slate-500">
                           <BookOpen size={14} />
-                          <span>Academic Event</span>
+                          <span>School Event</span>
                         </div>
                       </div>
                     </div>
@@ -279,13 +293,13 @@ const SchoolCalendar = () => {
                       <div className="p-4 bg-amber-50 rounded-lg border border-amber-100">
                         <div className="flex items-center mb-3">
                           <div className="w-2 h-2 bg-amber-500 rounded-full mr-2"></div>
-                          <h4 className="text-lg font-semibold text-amber-700">Leave: {leave.name}</h4>
+                          <h4 className="text-lg font-semibold text-amber-700">{leave.title}</h4>
                         </div>
-                        <p className="text-slate-700">{leave.reason}</p>
+                        <p className="text-slate-700">{leave.description}</p>
                         
                         <div className="mt-4 pt-4 border-t border-amber-100 flex items-center gap-2 text-sm text-slate-500">
                           <User size={14} />
-                          <span>Personal Leave</span>
+                          <span>School Holiday</span>
                         </div>
                       </div>
                     </div>
