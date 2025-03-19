@@ -8,6 +8,7 @@ import OurVideos from '../../components/Home/OurVideos'
 import Apply from '../../components/Home/Apply'
 import Welcome from '../../components/Home/Welcome'
 import Principle from '../../components/Home/principle'
+import Calendar from '../../components/Home/Calendar'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Welcome />
       <Principle />
       <News />
+      <Calendar />
       <Gallary />
       <School /> 
       <OurVideos />
