@@ -8,8 +8,11 @@ import OurVideos from '../../components/Home/OurVideos'
 import Apply from '../../components/Home/Apply'
 import Welcome from '../../components/Home/Welcome'
 import Principle from '../../components/Home/principle'
+
 // import WhyChooseUs from "../../components/WhyChooseUS";
 import Testimonial from '../../components/Home/Testimonial'
+
+import Calendar from '../../components/Home/Calendar'
 
 
 const Home = () => {
@@ -49,11 +52,13 @@ const Home = () => {
       <Carousel />
       <Welcome />
       <Principle />
-      <News />  
-      <Gallery cards={cards} />
-     <OurVideos />
-        <School /> 
-      <Testimonial />
+      <News />
+      <Calendar />
+      <Gallary />
+      <School /> 
+      <OurVideos />
+      <Testimonials />
+
       <Apply />
       {/* <WhyChooseUs/> */}
    
