@@ -74,4 +74,3 @@ const UniformGuidelines = () => {
 };
 
 export default UniformGuidelines;
-
