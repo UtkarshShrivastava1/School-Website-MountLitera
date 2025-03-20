@@ -1,11 +1,13 @@
 import React from 'react'
-import ParentVisitingHours from '../../components/ParentsCorner/ParentVisitingHours'
+import VisitingHoursPage  from '../../components/ParentsCorner/ParentVisitingHour'
 
 
 const ParentVisiting = () => {
   return (
     <>
-    <ParentVisitingHours />
+ 
+    <VisitingHoursPage />
+
     </>
   )
 }

@@ -138,7 +138,7 @@ const ContactPage = () => {
         {/* Right Column - Modern Contact Form */}
         <div className="lg:w-1/2">
           <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
-            <div className="p-8 bg-gradient-to-r from-red-500 to-red-600">
+            <div className="p-8 bg-gradient-to-r from-red-700 to-[#800000]">
               <h2 className="text-3xl font-bold text-white mb-2">Send a Message</h2>
               <p className="text-white text-opacity-80">
                 Fill out the form and we'll get back to you within 24 hours.
@@ -234,7 +234,7 @@ const ContactPage = () => {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-3 rounded-lg hover:from-red-700 hover:to-red-800 transition duration-300 transform hover:-translate-y-1 hover:scale-105 shadow-lg"
+                className="w-full bg-gradient-to-r from-red-700 to-[#800000] text-white py-3 rounded-lg hover:from-red-700 hover:to-red-800 transition duration-300 transform hover:-translate-y-1 hover:scale-105 shadow-lg"
               >
                 Send Message
               </button>
