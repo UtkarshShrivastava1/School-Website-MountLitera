@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
-import image1 from "../assets/c-1.png";
+import image1 from "../../assets/c-1.png";
 
 const Carousal = () => {
   const images = [

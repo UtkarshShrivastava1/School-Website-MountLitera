@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Menu, X, Calendar, Bell, User } from 'lucide-react';
+import { Menu, X, Calendar, Bell, User, Icon, icons } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import Logo from '../assets/Logo.jpg';
-import {  School, MessageCircle, NotebookText, Scale ,Eye,ShieldMinus} from 'lucide-react';
+import Logo from '../../assets/Logo.jpg';
+import {  School, MessageCircle, NotebookText, Scale ,Eye,ShieldMinus, CircleGauge,Medal,Cctv,HouseWifi, CircleHelp ,Users,MapPin, Phone , ReceiptText,Calendar1,Mails, Image, Clock6 ,Wifi , SquareUserRound ,Newspaper,Bug,Braces  } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,11 +46,11 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'Why MLZS', link: '/why-mlzs' },
-        { name: 'Academics Pre-Primary', link: '/academics-pre-primary' },
-        { name: 'Academics: Primary', link: '/academics-primary' },
-        { name: 'Academics: Middle', link: '/academics-middle' },
-        { name: 'Beyond Academics', link: '/beyond-academics' },
+        { name: 'Why MLZS', link: '/why-mlzs',icon:<CircleHelp/> },
+        { name: 'Academics Pre-Primary', link: '/academics-pre-primary',icon:<Users/> },
+        { name: 'Academics: Primary', link: '/academics-primary',icon:<Users/> },
+        { name: 'Academics: Middle', link: '/academics-middle',icon:<Users/>},
+        { name: 'Beyond Academics', link: '/beyond-academics',icon:<Users/> },
       ]
     },
     { 
@@ -60,8 +60,8 @@ const Navbar = () => {
       dropdownItems: [
         { name: 'Guidelines & Procedures', link: '/guidelines-procedures' ,icon:<NotebookText/>},
         { name: 'School Rules & Regulations', link: '/school-rules-regulations',icon:<Scale/> },
-        { name: 'Withdrawal Policy', link: '/withdrawal-policy' },
-        { name: 'Enquiry Form', link: '/enquiry-form' },
+        { name: 'Withdrawal Policy', link: '/withdrawal-policy',icon:<ReceiptText/> },
+        { name: 'Enquiry Form', link: '/enquiry-form',icon:<ReceiptText/> },
       ]
     },
     { 
@@ -69,13 +69,13 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'Our Campus', link: '/our-campus' },
-        { name: 'Hi-Tech Classes', link: '/hi-tech-classes' },
-        { name: 'Faculty', link: '/faculty' },
-        { name: 'Security & CCTV Surveillance', link: '/security-cctv-surveillance' },
-        { name: 'Sport Facilities', link: '/sport-facilities' },
-        { name: 'Transport Facilities', link: '/transport-facilities' },
-        { name: 'IT Infrastructure', link: '/it-infrastructure' },
+        { name: 'Our Campus', link: '/our-campus' , icon : <School />},
+        { name: 'Hi-Tech Classes', link: '/hi-tech-classes',icon:<Wifi/> },
+        { name: 'Faculty', link: '/faculty', icon:< SquareUserRound/> },
+        { name: 'Security & CCTV Surveillance', link: '/security-cctv-surveillance',icon:<Cctv/> },
+        { name: 'Sport Facilities', link: '/sport-facilities',icon:<Medal/> },
+        { name: 'Transport Facilities', link: '/transport-facilities',icon:<CircleGauge/> },
+        { name: 'IT Infrastructure', link: '/it-infrastructure',icon:    <HouseWifi /> },
       ]
     },
     { 
@@ -83,17 +83,17 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'School Calendar', link: '/school-calendar',},
-        { name: 'Fee Structure', link: '/fee-structure' },
-        { name: 'Gallery', link: '/gallery' },
-        { name: 'News & Events', link: '/news-events' },
-        { name: 'School Notification', link: '/school-notification' },
-        { name: 'EPFUTURE', link: '/epfuture' },
-        { name: 'Parent Visiting Hours', link: '/parent-visiting-hours' },
-        { name: 'Accolades', link: '/accolades' },
-        { name: 'House System', link: '/house-system' },
-        { name: 'View Issued Tcs', link: '/view-issued-tcs' },
-        { name: 'Guidelines For Parents', link: '/guidelines-for-parents' },
+        { name: 'School Calendar', link: '/school-calendar',icon:<Calendar1/> },
+        { name: 'Fee Structure', link: '/fee-structure',icon:<ReceiptText/> },
+        { name: 'Gallery', link: '/gallery' ,icon:< Image/>},
+        { name: 'News & Events', link: '/news-events',icon:<Mails/>  },
+        { name: 'School Notification', link: '/school-notification',icon:<Bell/> },
+        { name: 'EPFUTURE', link: '/epfuture' ,icon:<Braces/>},
+        { name: 'Parent Visiting Hours', link: '/parent-visiting-hours',icon:<Clock6/> },
+        { name: 'Accolades', link: '/accolades',icon:<Medal/> },
+        { name: 'House System', link: '/house-system' ,icon:<Users/>},
+        { name: 'View Issued Tcs', link: '/view-issued-tcs',icon:<Bug /> },
+        { name: 'Guidelines For Parents', link: '/guidelines-for-parents',icon:<NotebookText/> },
       ]
     },
     { 
@@ -101,10 +101,10 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'Student Guidelines', link: '/student-guidelines' },
-        { name: 'School Uniform', link: '/school-uniform' },
-        { name: 'School Timing', link: '/school-timing' },
-        { name: 'Attendance Policy', link: '/attendance-policy' }
+        { name: 'Student Guidelines', link: '/student-guidelines',icon:<NotebookText/> },
+        { name: 'School Uniform', link: '/school-uniform',icon:<ShieldMinus/> },
+        { name: 'School Timing', link: '/school-timing',icon:<Clock6/> },
+        { name: 'Attendance Policy', link: '/attendance-policy',icon:<Users/> },
       ]
     },
     { 
@@ -112,9 +112,10 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'Contact', link: '/contact' },
-        { name: 'Careers', link: '/careers' },
-        { name: 'Our Location', link: '/our-location' }
+        { name: 'Contact', link: '/contact',icon:<Phone/> },
+        { name: 'Careers', link: '/careers',icon:<Users/> },
+        { name: 'Our Location', link: '/our-location' ,icon:<MapPin
+        />},
       ]
     },
     { name: 'Mandatory Disclosure', link: '/mandatory-disclosure', dropdown: false }
@@ -216,7 +217,7 @@ const Navbar = () => {
                   )} */}
 
 {item.dropdown && (
-  <div className="absolute left-0 mt-2 w-70 bg-white rounded-lg shadow-lg invisible group-hover:visible transition-all duration-300 opacity-0 group-hover:opacity-100 z-50 flex flex-col  cursor-pointer ">
+  <div className="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-lg invisible group-hover:visible transition-all duration-300 opacity-0 group-hover:opacity-100 z-50 flex flex-col  cursor-pointer ">
     <div className="py-2 w-full flex flex-col items-center">
       {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
         <button 

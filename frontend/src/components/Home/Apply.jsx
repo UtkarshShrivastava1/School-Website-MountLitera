@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const SchoolTourSection = () => {
-  const [isHoveredApply, setIsHoveredApply] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const [isHoveredBook, setIsHoveredBook] = useState(false);
 
   return (
@@ -23,15 +23,15 @@ const SchoolTourSection = () => {
         <div className="flex flex-col sm:flex-row gap-6">
           <button 
             className={`relative overflow-hidden bg-white text-yellow-600 px-8 py-4 font-medium rounded shadow-lg transform transition-all duration-300 ${
-              isHoveredApply ? 'scale-105 shadow-xl' : ''
+              isHovered ? 'scale-105 shadow-xl' : ''
             }`}
-            onMouseEnter={() => setIsHoveredApply(true)}
-            onMouseLeave={() => setIsHoveredApply(false)}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
-            <span className="relative z-10">APPLY NOW</span>
+            <span className="relative z-10"> NOW</span>
             <span 
               className={`absolute inset-0 bg-gradient-to-r from-yellow-400 to-red-400 opacity-0 transition-opacity duration-300 ${
-                isHoveredApply ? 'opacity-20' : ''
+                isHovered ? 'opacity-20' : ''
               }`}
             ></span>
           </button>

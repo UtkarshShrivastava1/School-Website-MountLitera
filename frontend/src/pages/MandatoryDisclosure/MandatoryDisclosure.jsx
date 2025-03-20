@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../../components/Heder'
-import Footer from '../../components/Footer'
+import Header from '../../components/Home/Navbar'
+import Footer from '../../components/Home/Footer'
 import MandatoryPage from '../../components/MandatoryPage/MandatoryPage'
 
 const MandatoryDisclosure = () => {

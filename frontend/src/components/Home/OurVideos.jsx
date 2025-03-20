@@ -1,5 +1,5 @@
 import React , { useEffect, useState, useRef } from 'react';
-import Image from '../assets/c-4.png';
+import Image from '../../assets/c-4.png';
 const statsData = [
   { label: 'Students', value: 1200 },
   { label: 'Teachers', value: 120 },
