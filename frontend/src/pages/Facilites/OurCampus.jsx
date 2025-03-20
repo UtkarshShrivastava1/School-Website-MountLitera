@@ -1,18 +1,16 @@
 import React from 'react'
-import SportsFacilities from '../../components/facilites/Sports'
-import ITInfrastructure from '../../components/facilites/ITinfrastructure'
-import TransportFacilities from '../../components/facilites/Transport'
-import Campusfacilities from '../../components/facilites/OurCampus'
-
+import OurCampusfeatures from '../../components/Facilities/OurCampusfeatures'
+import ITInfrastructure from '../../components/Facilities/ITInfrastructure'
+import SportsFacilities from '../../components/Facilities/SportsFacilitiess'
 
 const OurCampus = () => {
   return (
     <>
-    <Campusfacilities />
-   <SportsFacilities />
-   <ITInfrastructure />
-    <TransportFacilities />
-
+    
+    <OurCampusfeatures />
+    <ITInfrastructure />
+    <SportsFacilities />
+  
     </>
   )
 }

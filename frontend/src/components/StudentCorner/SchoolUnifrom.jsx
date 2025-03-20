@@ -47,7 +47,7 @@ const UniformGuidelines = () => {
             key={uniform.id}
             onClick={() => setActiveTab(uniform.id)}
             className={`
-              flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300
+              flex items-center space-x-2 px-4 py-2 rounded-lg transition-all cursor-pointer duration-300
               ${activeTab === uniform.id 
                 ? 'bg-blue-600 text-white' 
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}
@@ -74,4 +74,3 @@ const UniformGuidelines = () => {
 };
 
 export default UniformGuidelines;
-

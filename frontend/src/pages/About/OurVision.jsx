@@ -1,14 +1,12 @@
 import React from 'react'
-
-import Vision from '../../components/AboutUs/Vision'
-
+import OurVisionAndMission from '../../components/AboutUs/OurVisionandMission'
 
 const OurVision = () => {
   return (
     <>
-    
-    <Vision />
-    
+
+   <OurVisionAndMission />
+
     </>
   )
 }

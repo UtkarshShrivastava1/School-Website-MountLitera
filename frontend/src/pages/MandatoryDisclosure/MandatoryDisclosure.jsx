@@ -1,10 +1,14 @@
 import React from 'react'
-import MandatoryDisclosurePage from '../../components/Mandatory Disclosure/MandatoryDisclosure'
+import Header from '../../components/Home/Navbar'
+import Footer from '../../components/Home/Footer'
+import MandatoryPage from '../../components/MandatoryPage/MandatoryPage'
 
 const MandatoryDisclosure = () => {
   return (
     <>
-    <MandatoryDisclosurePage /> 
+    <Header />
+    <MandatoryPage />
+    <Footer />
     </>
   )
 }

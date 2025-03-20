@@ -59,7 +59,7 @@ const TestimonialSlider = () => {
     <div className="w-full max-w-4xl mx-auto px-4 py-8">
      <div className="flex items-center justify-center mb-10">
         <div className="w-1/4 h-px bg-gray-300"></div>
-        <h2 className="text-3xl md:text-4xl font-serif text-red-800 px-6">Parents Testimonials</h2>
+        <h2 className="text-3xl md:text-4xl font-serif text-black px-6">Parents <span className='text-red-800'>Testimonials </span> </h2>
         <div className="w-1/4 h-px bg-gray-300"></div>
       </div>
 

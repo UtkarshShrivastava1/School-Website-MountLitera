@@ -1,13 +1,13 @@
 import React from 'react'
+import WhyChooseUs from '../../components/WhyChooseUS'
 
-import WhyMlZS from '../../components/WhyMlzs/Why'
 
 const WhyMLZS = () => {
   return (
     <>
-    
-    <WhyMlZS />
-    
+ 
+    <WhyChooseUs />
+  
     </>
   )
 }

@@ -1,13 +1,14 @@
 import React from 'react'
-
-import ApplySteps from '../../components/contact/Steps'
+import Header from '../../components/Home/Navbar'
+import Footer from '../../components/Home/Footer'
+import CareersPage from '../../components/contact/Steps'
 
 const Careers = () => {
   return (
     <>
-        
-        <ApplySteps />
-       
+        <Header />
+        <CareersPage />
+        <Footer />
     </>
   )
 }
