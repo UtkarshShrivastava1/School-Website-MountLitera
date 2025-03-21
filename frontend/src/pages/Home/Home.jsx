@@ -1,16 +1,15 @@
 import React from 'react'
-import News from '../../components/Home/News'
 import Carousel from '../../components/Home/Carousal'
+import News from '../../components/Home/News'
 import School from '../../components/Home/School'
 // import AnimatedTestimonials from '../../components/AnimatedTestimonials'
-import {Gallery} from '../../components/Gallery'
-import OurVideos from '../../components/Home/OurVideos'
+import Gallery from '../../components/Gallery'
 import Apply from '../../components/Home/Apply'
+import OurVideos from '../../components/Home/OurVideos'
 import Welcome from '../../components/Home/Welcome'
 import Principle from '../../components/Home/principle'
-
+import Testimonials from '../../components/Home/Testimonial'
 // import WhyChooseUs from "../../components/WhyChooseUS";
-import Testimonial from '../../components/Home/Testimonial'
 
 import Calendar from '../../components/Home/Calendar'
 import TestimonialSlider from '../../components/Home/Testimonial'

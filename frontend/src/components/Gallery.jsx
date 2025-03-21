@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { cn } from "@/components/utils"
 
-export const Gallery = ({ cards }) => {
+const Gallery = ({ cards }) => {
   const [selected, setSelected] = useState(null)
   const [lastSelected, setLastSelected] = useState(null)
 
@@ -122,3 +122,6 @@ const SelectedCard = ({ selected }) => {
     </div>
   )
 }
+
+
+export default Gallery;
