@@ -12,6 +12,7 @@ import Testimonials from '../../components/Home/Testimonial'
 // import WhyChooseUs from "../../components/WhyChooseUS";
 
 import Calendar from '../../components/Home/Calendar'
+import TestimonialSlider from '../../components/Home/Testimonial'
 
 
 const Home = () => {
@@ -56,7 +57,7 @@ const Home = () => {
       <Gallery  cards={cards}/>
       <School /> 
       <OurVideos />
-      <Testimonials />
+      <TestimonialSlider />
 
       <Apply />
       {/* <WhyChooseUs/> */}
