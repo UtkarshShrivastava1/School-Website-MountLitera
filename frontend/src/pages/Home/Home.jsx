@@ -13,6 +13,7 @@ import Principle from '../../components/Home/principle'
 import Testimonial from '../../components/Home/Testimonial'
 
 import Calendar from '../../components/Home/Calendar'
+import TestimonialSlider from '../../components/Home/Testimonial'
 
 
 const Home = () => {
@@ -54,10 +55,10 @@ const Home = () => {
       <Principle />
       <News />
       <Calendar />
-      <Gallary />
+      <Gallery cards={cards} />
       <School /> 
       <OurVideos />
-      <Testimonials />
+      <TestimonialSlider />
 
       <Apply />
       {/* <WhyChooseUs/> */}
