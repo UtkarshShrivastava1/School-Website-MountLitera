@@ -1,146 +1,75 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import image1 from '../../assets/c-1.png';
-import image2 from '../../assets/c-2.png';
-import image3 from '../../assets/c-3.png';
-import image4 from '../../assets/c-4.png';
+import React, { useState, useEffect } from "react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
+import image1 from "../../assets/c-1.png";
 
-const WelcomeCarousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const slides = [
+const Carousal = () => {
+  const images = [
     {
-      id: 1,
-      imgSrc: image3,
-      title: "Welcome",
-      mainText: "Sidwell Friends School",
-      description: "A dynamic learning community grounded in Quaker values.",
-      buttonText: "Enquiry"
+      url: "https://images.pexels.com/photos/6859240/pexels-photo-6859240.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      location: "Main Road, Near Over Bridge Uslapur, Bilaspur C.G., Bilaspur Chhattisgarh, India 495001",
+      text: "Modern Secure and Safe Infrastructure @ MLZS Bilaspur",
     },
     {
-      id: 2,
-      imgSrc: image2,
-      title: "Our Students",
-      mainText: "Nurturing Bright Minds",
-      description: "Creating an environment where every student can thrive and grow.",
-      buttonText: "DISCOVER MORE"
+      url: "https://images.pexels.com/photos/1633791/pexels-photo-1633791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      location: "Main Road, Near Over Bridge Uslapur, Bilaspur C.G., Bilaspur Chhattisgarh, India 495001",
+      text: "Modern Secure and Safe Infrastructure @ MLZS Bilaspur",
     },
-    {
-      id: 3,
-      imgSrc: image1,
-      title: "Our Faculty",
-      mainText: "Dedicated Educators",
-      description: "Expert teachers committed to inspiring the next generation.",
-      buttonText: "MEET OUR TEAM"
-    },
-    {
-      id: 4,
-      imgSrc: image4,
-      title: "Our Faculty",
-      mainText: "Dedicated Educators",
-      description: "Expert teachers committed to inspiring the next generation.",
-      buttonText: "MEET OUR TEAM"
-    }
   ];
 
-  const nextSlide = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-    setTimeout(() => setIsAnimating(false), 500);
-  };
+  const [current, setCurrent] = useState(0);
 
-  const prevSlide = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-    setTimeout(() => setIsAnimating(false), 500);
-  };
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
+  const prevSlide = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative w-full h-[75vh] overflow-hidden bg-gray-900">
-      {slides.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${
-            index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
-          }`}
-        >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <img
-              src={slide.imgSrc}
-              alt={slide.title}
-              className="w-full h-full object-cover"
-            />
-            {/* Gradient Overlay - Bottom only */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+    <div className="relative w-full max-w-6xl mx-auto mt-10 rounded-lg overflow-hidden shadow-lg">
+      <div
+        className="h-[400px] sm:h-[600px] bg-cover bg-center flex flex-col justify-center text-white px-6 sm:px-8"
+        style={{ backgroundImage: `url(${images[current].url})` }}
+      >
+        <h1 className="text-2xl sm:text-4xl font-bold text-center sm:text-left">{images[current].text}</h1>
+        <p className="text-md sm:text-lg mt-2 text-center sm:text-left">CBSE Affiliation No :  3330519</p>
+        <p className="absolute bottom-5 left-6 sm:left-8 text-sm sm:text-md">📍 {images[current].location}</p>
+      </div>
+      
+      <button
+        onClick={prevSlide}
+        className="absolute top-1/2 left-3 sm:left-5 transform -translate-y-1/2 bg-gray-800/50 p-2 sm:p-3 rounded-full"
+      >
+        <ChevronLeft className="text-white" />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute top-1/2 right-3 sm:right-5 transform -translate-y-1/2 bg-gray-800/50 p-2 sm:p-3 rounded-full"
+      >
+        <ChevronRight className="text-white" />
+      </button>
+      
+      <div className="absolute bottom-0 w-full bg-white p-3 sm:p-4 rounded-t-lg shadow-lg sm:mt-1.5">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 text-center">
+          <div className="flex-1">
+            <h3 className="text-black font-bold text-lg sm:text-sm">Pre-Primary</h3>
+            <p className="text-sm">Playgroup to Sr.KG</p>
           </div>
-
-          {/* Content Container - Bottom Left */}
-          <div className="absolute bottom-16 left-0 w-full">
-            <div className="container mx-auto px-4 md:px-8 lg:px-16">
-              <div className="max-w-lg">
-                {/* Small Title */}
-                <div className="overflow-hidden mb-5">
-                  <h2 className="text-emerald-400 text-5xl font-medium tracking-wide transform transition-transform duration-500">
-                    {/* {slide.title} */}
-                  </h2>
-                </div>
-                
-                {/* Main Heading */}
-                <div className="overflow-hidden mb-2">
-                  <h1 className="text-xl md:text-2xl text-white font-bold leading-tight transform transition-transform duration-500">
-                    {slide.mainText}
-                  </h1>
-                </div>
-                
-                {/* Description */}
-                <div className="overflow-hidden mb-3">
-                  <p className="text-sm text-white/90 font-light leading-relaxed transform transition-transform duration-500 max-w-md">
-                    {slide.description}
-                  </p>
-                </div>
-                
-                {/* Button */}
-                <div className="transform transition-transform duration-500">
-                  <button className="bg-emerald-500 text-white px-4 py-2 text-xs rounded hover:bg-emerald-600 transition-colors duration-300 font-medium tracking-wide">
-                    {slide.buttonText}
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div className="h-px w-12 sm:h-12 sm:w-px bg-gray-300"></div>
+          <div className="flex-1">
+            <h3 className="text-black font-bold text-lg">Primary</h3>
+            <p className="text-sm">Grade 1 to 5</p>
+          </div>
+          <div className="h-px w-12 sm:h-12 sm:w-px bg-gray-300"></div>
+          <div className="flex-1">
+            <h3 className="text-black font-bold text-lg">Middle School</h3>
+            <p className="text-sm">Grade 6 to 8</p>
           </div>
         </div>
-      ))}
-
-      {/* Navigation Buttons - Right side */}
-      <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col space-y-2 z-20">
-        <button
-          onClick={prevSlide}
-          disabled={isAnimating}
-          className="p-1.5 rounded-full bg-white/20 hover:bg-white/30 transition-colors duration-300"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-4 h-4 text-white" />
-        </button>
-        <button
-          onClick={nextSlide}
-          disabled={isAnimating}
-          className="p-1.5 rounded-full bg-white/20 hover:bg-white/30 transition-colors duration-300"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-4 h-4 text-white" />
-        </button>
       </div>
     </div>
   );
 };
 
-export default WelcomeCarousel;
+export default Carousal;
