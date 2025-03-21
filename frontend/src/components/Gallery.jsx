@@ -123,5 +123,4 @@ const SelectedCard = ({ selected }) => {
   )
 }
 
-
 export default Gallery
