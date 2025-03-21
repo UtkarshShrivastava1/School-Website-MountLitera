@@ -7,7 +7,10 @@ import NoticeForm from './NoticeForm';
 import EventForm from './EventForm';
 import GalleryForm from './GalleryForm';
 import HolidayForm from './HolidayForm';
-import { MdOutlineEmojiEvents } from "react-icons/md";
+import { FaCalendarAlt } from "react-icons/fa";
+import { IoMdNotifications } from "react-icons/io";
+import { MdPhotoLibrary } from "react-icons/md";
+import { FaUmbrellaBeach } from "react-icons/fa";
 
 
 
@@ -33,7 +36,12 @@ function AdminDasboard() {
   };
     const [activeItem, setActiveItem] = useState("events");
   
-  const menuItems = ["events", "notice", "gallery","holidays"];
+    const menuItems = [
+      { name: "events", icon: FaCalendarAlt },
+      { name: "notice", icon: IoMdNotifications },
+      { name: "gallery", icon: MdPhotoLibrary },
+      { name: "holidays", icon: FaUmbrellaBeach }
+    ];
 
     const handlelogout =()=>{
         localStorage.clear();
@@ -83,19 +91,20 @@ function AdminDasboard() {
 
        <section className='flex h-[87.9vh] '>
        <aside className='w-[20%]  bg-red-900 py-4'>
-        <ul className="space-y-2">
-        {menuItems.map((item) => (
-          <li
-            key={item}
-            onClick={() => setActiveItem(item)}
-            className={`font-serif cursor-pointer p-2 rounded-md text-center capitalize text-xl text-white ${
-              activeItem === item ? " underline text-white" : "text-decoration-none"
-            }`}
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
+       <ul className="space-y-2">
+  {menuItems.map((item) => (
+    <li
+      key={item.name}
+      onClick={() => setActiveItem(item.name)}
+      className={`font-serif cursor-pointer p-2 rounded-md text-center capitalize text-xl text-white flex items-center justify-center gap-2 ${
+        activeItem === item.name ? "  text-white bg-red-800" : "text-decoration-none"
+      }`}
+    > 
+      <item.icon className="text-lg text-yellow-200" />
+      {item.name}
+    </li>
+  ))}
+</ul>
         </aside>
         <div className='w-[80%] my-auto overflow-hidden overflow-y-auto no-scrollbar'>
             {activeItem=== "events" && <EventForm/>}
