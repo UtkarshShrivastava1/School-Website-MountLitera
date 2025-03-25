@@ -7,10 +7,17 @@ const AttendanceMatters = () => {
     <>
     <div className="max-w-5xl mx-auto px-4 py-8">
       <div className="text-center mb-8">
-        <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+        <span className="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
           The Importance
         </span>
-        <h1 className="text-4xl font-bold mb-4">Why Attendance Matters</h1>
+        <div className="flex items-center justify-center mb-10">
+            <div className="w-1/4 h-px bg-gray-300"></div>
+            <h2 className="text-3xl md:text-4xl font-serif text-orange-700 px-6">
+            Why Attendance Matters
+            </h2>
+            <div className="w-1/4 h-px bg-gray-300"></div>
+          </div>
+       
         <p className="text-gray-600 max-w-2xl mx-auto">
           Regular attendance is directly linked to academic achievement and social development.
         </p>
@@ -19,8 +26,8 @@ const AttendanceMatters = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Academic Success Card */}
         <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
-          <div className="bg-green-50 p-4 inline-block rounded-lg mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="bg-orange-50 p-4 inline-block rounded-lg mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
           </div>
@@ -32,8 +39,8 @@ const AttendanceMatters = () => {
 
         {/* Skill Development Card */}
         <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
-          <div className="bg-green-50 p-4 inline-block rounded-lg mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="bg-orange-50 p-4 inline-block rounded-lg mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
@@ -45,8 +52,8 @@ const AttendanceMatters = () => {
 
         {/* Legal Requirement Card */}
         <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
-          <div className="bg-green-50 p-4 inline-block rounded-lg mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="bg-orange-50 p-4 inline-block rounded-lg mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
           </div>
@@ -61,10 +68,18 @@ const AttendanceMatters = () => {
     {/* //AttandancePolicy  */}
     <div className="max-w-5xl mx-auto px-4 py-8">
       <div className="text-center mb-8">
-        <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+        <span className="inline-block bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
           Policy Details
         </span>
-        <h1 className="text-4xl font-bold mb-4">Our Attendance Policy</h1>
+        <div className="flex items-center justify-center mb-10">
+            <div className="w-1/4 h-px bg-gray-300"></div>
+            <h2 className="text-3xl md:text-4xl font-serif text-orange-700 px-6">
+            Our Attendance Policy
+            </h2>
+            <div className="w-1/4 h-px bg-gray-300"></div>
+          </div>
+        
+       
         <p className="text-gray-600">
           Clear guidelines to ensure consistent attendance and academic success.
         </p>
@@ -75,7 +90,7 @@ const AttendanceMatters = () => {
   <div className="flex space-x-2">
     <button
       className={`px-6 py-3 rounded-full text-sm font-medium ${
-        activeTab === 'general' ? 'bg-green-600 text-white' : 'bg-gray-100 text-gray-800'
+        activeTab === 'general' ? 'bg-orange-600 text-white' : 'bg-gray-100 text-gray-800'
       }`}
       onClick={() => setActiveTab('general')}
     >
@@ -83,7 +98,7 @@ const AttendanceMatters = () => {
     </button>
     <button
       className={`px-6 py-3 rounded-full text-sm font-medium ${
-        activeTab === 'absences' ? 'bg-green-600 text-white' : 'bg-gray-100 text-gray-800'
+        activeTab === 'absences' ? 'bg-orange-600 text-white' : 'bg-gray-100 text-gray-800'
       }`}
       onClick={() => setActiveTab('absences')}
     >
@@ -110,7 +125,7 @@ const AttendanceMatters = () => {
           <div className="space-y-6">
             <div className="flex">
               <div className="mr-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-medium">1</span>
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-medium">1</span>
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Daily Attendance</h3>
@@ -120,7 +135,7 @@ const AttendanceMatters = () => {
 
             <div className="flex">
               <div className="mr-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-medium">2</span>
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-medium">2</span>
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Minimum Attendance Rate</h3>
@@ -130,7 +145,7 @@ const AttendanceMatters = () => {
 
             <div className="flex">
               <div className="mr-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-medium">3</span>
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-medium">3</span>
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Reporting Absences</h3>
@@ -140,7 +155,7 @@ const AttendanceMatters = () => {
 
             <div className="flex">
               <div className="mr-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-medium">4</span>
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-medium">4</span>
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Documentation</h3>
@@ -160,7 +175,7 @@ const AttendanceMatters = () => {
           <div className="space-y-6 p-5">
             <div className="flex">
               <div className="mr-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-medium">1</span>
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-medium">1</span>
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Late to school</h3>
@@ -171,7 +186,7 @@ const AttendanceMatters = () => {
 
             <div className="flex">
               <div className="mr-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-medium">2</span>
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-medium">2</span>
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Permission for absence</h3>
@@ -182,7 +197,7 @@ const AttendanceMatters = () => {
 
             <div className="flex">
               <div className="mr-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-medium">3</span>
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-medium">3</span>
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Excused Absence</h3>
@@ -193,7 +208,7 @@ const AttendanceMatters = () => {
 
             <div className="flex">
               <div className="mr-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-medium">4</span>
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-medium">4</span>
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Excessive Absence</h3>
@@ -203,7 +218,7 @@ const AttendanceMatters = () => {
 
             <div className="flex">
               <div className="mr-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-medium">4</span>
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-medium">4</span>
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Home Schooling</h3>

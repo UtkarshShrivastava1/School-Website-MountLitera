@@ -248,7 +248,7 @@ const Navbar = () => {
   return (
     <div className="w-full ">
       {/* Top Navbar - Burgundy Background */}
-      <div className="bg-gradient-to-r from-red-700 to-[#800000] text-white py-3 px-4 md:px-8">
+      <div className="bg-gradient-to-r from-[#191f5d] to-[#191f5d] text-white py-3 px-4 md:px-8">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo and Title */}
           <div className="flex items-center space-x-3">

@@ -4,9 +4,9 @@ import CareersPage from '../../components/contact/Steps'
 const Careers = () => {
   return (
     <>
-  
+        
         <CareersPage />
-      
+       
     </>
   )
 }

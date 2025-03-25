@@ -48,7 +48,7 @@ const SchoolCalendar = () => {
 
       console.log("Fetching data for:", formattedDate);
 
-      const response = await axios.get(`http://localhost:5000/details/${formattedDate}`);
+      const response = await axios.get(`http://localhost:3000/details/${formattedDate}`);
 
       console.log("Response data:", response.data);
 
@@ -92,7 +92,7 @@ const SchoolCalendar = () => {
   };
 
   return (
-    <div className="min-h-screen bg-teal-50 text-slate-800">
+    <div className="min-h-screen  text-slate-800">
       {/* Navbar */}
       {/* <div className="bg-white border-b border-teal-100 px-4 sm:px-8 py-4 sticky top-0 z-10 shadow-sm">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
@@ -111,9 +111,16 @@ const SchoolCalendar = () => {
       <main className="max-w-7xl mx-auto py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
         {/* Header - Centered */}
         <div className="mb-8 sm:mb-12 mt-2 sm:mt-4 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-800">
+          <div className="flex items-center justify-center mb-10">
+            <div className="w-1/4 h-px bg-gray-300"></div>
+            <h2 className="text-3xl md:text-4xl font-serif text-orange-700 px-6">
             Academic Calendar
-          </h2>
+            </h2>
+            <div className="w-1/4 h-px bg-gray-300"></div>
+          </div>
+          {/* <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-800">
+            Academic Calendar
+          </h2> */}
           <p className="mt-2 sm:mt-3 text-slate-500 max-w-xl mx-auto">
             Track your schedule, manage events, and plan your academic journey
           </p>

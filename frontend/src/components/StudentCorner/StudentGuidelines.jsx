@@ -6,11 +6,11 @@ const StudentGuidelines = () => {
       <div className="w-4/5 mb-6 text-center mx-auto">
         <div className="flex items-center justify-center mb-10">
           <div className="w-1/4 h-px bg-gray-300"></div>
-          <h2 className="text-3xl md:text-4xl font-serif text-red-800 px-6">Student Guidelines</h2>
+          <h2 className="text-3xl md:text-4xl font-serif text-orange-700 px-6">Student Guidelines</h2>
           <div className="w-1/4 h-px bg-gray-300"></div>
         </div>
         <p className="text-gray-600 max-w-4xl mx-auto">
-          MLZ School is an institution for teaching and education wherein we have a set of rules to ensure discipline and safety of all members of our educational community. Every student’s enrolment at MLZ School means adhering to the defined set of rules and a commitment towards respecting them. Parents are advised to explain to their children about these rules and help them understand its virtue in establishing harmony. These rules include:
+        Shree Padmakshi Global School is an institution for teaching and education wherein we have a set of rules to ensure discipline and safety of all members of our educational community. Every student’s enrolment at Shree Padmakshi Global School means adhering to the defined set of rules and a commitment towards respecting them. Parents are advised to explain to their children about these rules and help them understand its virtue in establishing harmony. These rules include:
         </p>
       </div>
       

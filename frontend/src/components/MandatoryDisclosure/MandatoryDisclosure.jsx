@@ -279,7 +279,7 @@ const SchoolPortal = () => {
             <div className="space-y-4">
               <div>
                 <h3 className="text-sm text-gray-500">School Name</h3>
-                <p className="font-medium">Mount Litera Zee School</p>
+                <p className="font-medium">Shree Padmakshi Global School</p>
               </div>
 
               <div>
@@ -311,7 +311,7 @@ const SchoolPortal = () => {
                 <h3 className="text-sm text-gray-500">Contact</h3>
                 <p className="font-medium">Phone: +91 9111777295</p>
                 <p className="font-medium">
-                  Email: mlzs.bilaspur@mountlitera.com
+                  Email: spgsbilaspur@gmail.com
                 </p>
                 <p className="font-medium">Website: www.mlzsbilaspur.edu</p>
               </div>
@@ -418,16 +418,49 @@ const SchoolPortal = () => {
                 </svg>
               </button>
               {expandedSection === "faculty" && (
-                <div className="p-4 border-t">
-                  <p className="text-gray-600">
-                    Faculty information would appear here.
-                  </p>
+                <div className="p-4 border-t space-y-4">
+                   <div>
+                    <h3 className="text-sm text-gray-500">
+                    List of Teachers & Their Qualifications :
+                    </h3>
+                    <p className="font-medium">Teachers 55</p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm text-gray-500">
+                    Administrative Staff :
+                    </h3>
+                    {/* <p className="font-medium">30 (Size 10.50x5.50</p> */}
+                  </div>
+                  <div>
+                    <h3 className="text-sm text-gray-500">
+                    Non-Teaching Staff :
+                    </h3>
+                    <p className="font-medium">5</p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm text-gray-500">
+                     Peons :
+                    </h3>
+                    <p className="font-medium">5</p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm text-gray-500">
+                     G4 staf :
+                    </h3>
+                    <p className="font-medium">14</p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm text-gray-500">
+                    Sweeper :
+                    </h3>
+                    <p className="font-medium"></p>
+                  </div>
                 </div>
               )}
             </div>
 
             {/* Academic Information */}
-            <div className="border rounded-lg">
+            {/* <div className="border rounded-lg">
               <button
                 className="w-full p-4 flex items-center justify-between"
                 onClick={() => toggleSection("academic")}
@@ -459,7 +492,7 @@ const SchoolPortal = () => {
                   </p>
                 </div>
               )}
-            </div>
+            </div> */}
 
             {/* Important Dates */}
             <div className="border rounded-lg p-4">
