@@ -11,7 +11,8 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { IoMdNotifications } from "react-icons/io";
 import { MdPhotoLibrary } from "react-icons/md";
 import { FaUmbrellaBeach } from "react-icons/fa";
-
+import { MdNotificationImportant } from "react-icons/md";
+import MandatoryDisclosureForm from './MandatoryDisclosureForm';
 
 
 function AdminDasboard() {
@@ -40,7 +41,8 @@ function AdminDasboard() {
       { name: "events", icon: FaCalendarAlt },
       { name: "notice", icon: IoMdNotifications },
       { name: "gallery", icon: MdPhotoLibrary },
-      { name: "holidays", icon: FaUmbrellaBeach }
+      { name: "holidays", icon: FaUmbrellaBeach },
+      { name: "Mandatory Disclosure", icon: MdNotificationImportant },
     ];
 
     const handlelogout =()=>{
@@ -49,7 +51,7 @@ function AdminDasboard() {
     }
   return (
     <>
-    <div className="bg-red-900 text-white py-3 px-4 md:px-8 min-h-[10vh]">
+    <div className="bg-[#191f5d] text-white py-3 px-4 md:px-8 h-[15vh] flex ">
             <div className="container mx-auto flex justify-between items-center">
               {/* Logo and Title */}
               <div className="flex items-center space-x-3">
@@ -89,18 +91,18 @@ function AdminDasboard() {
             </div>
           </div>
 
-       <section className='flex h-[87.9vh] '>
-       <aside className='w-[20%]  bg-red-900 py-4'>
+       <section className='flex min-h-[85vh] '>
+       <aside className='w-[20%] py-4 shadow-2xl'>
        <ul className="space-y-2">
   {menuItems.map((item) => (
     <li
       key={item.name}
       onClick={() => setActiveItem(item.name)}
-      className={`font-serif cursor-pointer p-2 rounded-md text-center capitalize text-xl text-white flex items-center justify-center gap-2 ${
-        activeItem === item.name ? "  text-white bg-red-800" : "text-decoration-none"
+      className={`font-serif cursor-pointer p-2 rounded-md text-center capitalize text-xl text-black flex items-center justify-center gap-2 ${
+        activeItem === item.name ? "  text-white bg-[#f25811] " : "text-decoration-none"
       }`}
     > 
-      <item.icon className="text-lg text-yellow-200" />
+      <item.icon className={`text-lg text-[#191f5d] ${activeItem === item.name ? " text-white": " "} `} />
       {item.name}
     </li>
   ))}
@@ -111,6 +113,7 @@ function AdminDasboard() {
             {activeItem=== "notice" && <NoticeForm/>}
             {activeItem=== "gallery" && <GalleryForm/>}
             {activeItem=== "holidays" && <HolidayForm/>}
+            {activeItem=== "Mandatory Disclosure" && <MandatoryDisclosureForm/>}
         </div>
        </section>
     </>

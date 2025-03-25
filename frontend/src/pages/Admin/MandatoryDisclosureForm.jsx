@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { addNotice } from "../../services/NotificationService";
+// import { addNotice } from "../../services/NotificationService";
+import { addDisclosure } from "../../services/DisclosureService";
 
-const NoticeForm = ({ refreshNotices }) => {
+const MandatoryDisclosureForm = ({ refreshNotices }) => {
   const [formData, setFormData] = useState({
+    type:"",
     title: "",
     description: "",
-    date: "",
+    // date: "",
   });
   const [file, setFile] = useState(null);
   const [message, setMessage] = useState("");
@@ -22,14 +24,17 @@ const NoticeForm = ({ refreshNotices }) => {
     e.preventDefault();
 
     const data = new FormData();
+    data.append("type", formData.type);
     data.append("title", formData.title);
     data.append("description", formData.description);
-    data.append("date", formData.date);
+    // data.append("date", formData.date);
     if (file) data.append("file", file);
 
+    console.log(data.type);
+
     try {
-      await addNotice(data);
-      setMessage("Notice added successfully!");
+      await addDisclosure(data);
+      setMessage("Disclosure added successfully!");
       setFormData({ title: "", description: "", date: "" });
       setFile(null);
 
@@ -37,10 +42,10 @@ const NoticeForm = ({ refreshNotices }) => {
       const fileInput = document.querySelector('input[type="file"]');
       if (fileInput) fileInput.value = "";
 
-      // Check if refreshNotices function exists before calling
-    if (typeof refreshNotices === "function") {
-      refreshNotices();
-    }
+//       // Check if refreshNotices function exists before calling
+//     if (typeof refreshNotices === "function") {
+//       refreshNotices();
+//     }
   } catch (error) {
     console.error("Error adding notice:", error);
     const errorMsg = error.response?.data?.error || error.message || "Unknown error";
@@ -50,12 +55,13 @@ const NoticeForm = ({ refreshNotices }) => {
 
   return (
     <div className="p-6 bg-white shadow-lg rounded-lg w-[50%] mx-auto mt-3">
-      <h2 className="text-xl font-bold mb-4 text-center">Add Notice</h2>
+      <h2 className="text-xl font-bold mb-4 text-center">Create Mandatory Disclosure</h2>
       {message && <p className="text-green-600">{message}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">
+        <input type="text" name="type" placeholder="Type" value={formData.type} onChange={handleChange} className="w-full p-2 border rounded" required />
         <input type="text" name="title" placeholder="Title" value={formData.title} onChange={handleChange} className="w-full p-2 border rounded" required />
         <textarea name="description" placeholder="Description" value={formData.description} onChange={handleChange} className="w-full p-2 border rounded" required />
-        <input type="date" name="date" value={formData.date} onChange={handleChange} className="w-full p-2 border rounded" required />
+        {/* <input type="date" name="date" value={formData.date} onChange={handleChange} className="w-full p-2 border rounded" required /> */}
         {/* <input type="file" onChange={handleFileChange} className="w-full p-2 border rounded" /> */}
         <div className="mb-6">
           {/* <label htmlFor="image" className="block text-sm font-medium text-gray-700 mb-1">
@@ -71,11 +77,11 @@ const NoticeForm = ({ refreshNotices }) => {
         {/* <button type="submit" className="bg-[#191f5d] text-white px-4 py-2 rounded transition-all ease-in-out cursor-pointer">Add Notice</button> */}
 
         <button type="submit" className="font-bold px-4 bg-[#f25811] text-white py-2 rounded-lg hover:bg-[rgb(242,88,17)] transition-all ease-in-out cursor-pointer">
-          Add Notice
+          Add Mandatory Disclosure
         </button>
       </form>
     </div>
   );
 };
 
-export default NoticeForm;
+export default MandatoryDisclosureForm;
