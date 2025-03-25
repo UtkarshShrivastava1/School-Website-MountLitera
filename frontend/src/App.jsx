@@ -49,6 +49,7 @@ import Navbar from './components/Home/Navbar';
 import Footer from './components/Home/Footer';
 import AdminLogin from './pages/Admin/AdminLogin';
 import AdminDasboard from './pages/Admin/AdminDasboard';
+import Director_1_Message from './pages/About/Director_1Message';
 
 function App() {
   return (
@@ -72,6 +73,7 @@ function AppContent() {
         <Route path="/our-mission" element={<OurMission />} />
         <Route path="/our-vision" element={<OurVision />} />
         <Route path="/director-message" element={<DirectorMessage />} />
+        <Route path="/director-message_1" element={<Director_1_Message />} />
         <Route path="/principal-message" element={<PrincipalMessage />} />
         <Route path="/value-education" element={<ValueEducation />} />
         <Route path="/why-mlzs" element={<WhyMLZS />} />

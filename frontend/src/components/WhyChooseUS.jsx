@@ -49,10 +49,10 @@ export default function WhyChooseUs() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-4">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Why Choose Mount Litera Zee School, Bilaspur
+                Why Choose SHREE PADMAKSHI GLOBAL SCHOOL, Bilaspur
               </h1>
               <p className="max-w-[600px] text-white/90 md:text-xl">
-                At Mount Litera Zee School, Bilaspur we focus on all-round development of students. Our emerging student
+                At SHREE PADMAKSHI GLOBAL SCHOOL, Bilaspur we focus on all-round development of students. Our emerging student
                 profile (ESP) puts equal emphasis on knowledge, life skills and values.
               </p>
             </div>
@@ -60,7 +60,7 @@ export default function WhyChooseUs() {
               <div className="relative h-[400px] w-[300px] md:h-[400px] md:w-[400px] rounded-full overflow-hidden border-4 border-white/20">
                 <img
                   src={Logo}
-                  alt="Mount Litera Zee School"
+                  alt="Mount  PADMAKSHI  Zee School"
                   fill
                   className="object-cover h-[400px]"
                 />
@@ -101,7 +101,7 @@ export default function WhyChooseUs() {
           isActive={activeTab === "tab4"}
           onClick={() => setActiveTab("tab4")}
          value="octave" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white cursor-pointer">
-                Litera Octave
+                 PADMAKSHI  Octave
               </TabsTrigger>
               <TabsTrigger
           isActive={activeTab === "tab5"}
@@ -150,7 +150,7 @@ export default function WhyChooseUs() {
                         fields.
                       </p>
                       <p className="mt-4 text-gray-700">
-                        MLZS Bilaspur works with the instructors to identify and set specific learning outcomes in each
+                        SPGS Bilaspur works with the instructors to identify and set specific learning outcomes in each
                         of the activities.
                       </p>
                     </div>
@@ -221,7 +221,7 @@ export default function WhyChooseUs() {
                     <div>
                       <p className="text-gray-700">
                         We have a vision of the child we aim to graduate and everything in our schools is designed
-                        around that vision. Emerging Student Profile (ESP) is the vision that Mount Litera Zee Schools
+                        around that vision. Emerging Student Profile (ESP) is the vision that SHREE PADMAKSHI GLOBAL SCHOOL
                         promises.
                       </p>
                       <p className="mt-4 text-gray-700">
@@ -253,14 +253,14 @@ export default function WhyChooseUs() {
                     <div className="bg-blue-600 p-3 rounded-full text-white">
                       <Octagon className="h-6 w-6" />
                     </div>
-                    <CardTitle>Litera Octave</CardTitle>
+                    <CardTitle> PADMAKSHI  Octave</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="pt-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <p className="text-gray-700">
-                        Litera Octave is the core belief of every Zee school. It is a proprietary pedagogical model that
+                         PADMAKSHI  Octave is the core belief of every Zee school. It is a proprietary pedagogical model that
                         has been honed over years of research and development. It integrates the various pillars that
                         impact the children during their learning and development in school.
                       </p>
@@ -268,14 +268,14 @@ export default function WhyChooseUs() {
                         It comprises EIGHT Critical interlinked elements of school engagement with parents and child.
                       </p>
                       <p className="mt-4 text-gray-700">
-                        These are: Litera Infra, Litera Content, Litera Network, Litera Lifeskills, Litera teacher,
-                        Litera Assessment, Litera Parents and Litera Enrichment
+                        These are:  PADMAKSHI  Infra,  PADMAKSHI  Content,  PADMAKSHI  Network,  PADMAKSHI  Lifeskills,  PADMAKSHI  teacher,
+                         PADMAKSHI  Assessment,  PADMAKSHI  Parents and  PADMAKSHI  Enrichment
                       </p>
                     </div>
                     <div className="relative h-[250px] rounded-lg overflow-hidden">
                       <img
                          src={Logo}
-                        alt="Litera Octave"
+                        alt=" PADMAKSHI  Octave"
                         fill
                         className="object-cover"
                       />
@@ -338,7 +338,7 @@ export default function WhyChooseUs() {
                     <div>
                       <p className="text-gray-700">
                         Our assessments focus on identifying what students are good at instead of whether they are good
-                        or not. MLZS Bilaspur assessments and parent teachers meetings take place on a continuous basis
+                        or not. SPGS Bilaspur assessments and parent teachers meetings take place on a continuous basis
                         and at the child's pace rather than through only stressful periodic exams.
                       </p>
                       <p className="mt-4 text-gray-700">
@@ -377,7 +377,7 @@ export default function WhyChooseUs() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <p className="text-gray-700">
-                        Education is all about giving back to the society. At MLZS Bilaspur, we prepare our students to
+                        Education is all about giving back to the society. At SPGS Bilaspur, we prepare our students to
                         work towards creating a sustainable environment on an ongoing basis.
                       </p>
                       <p className="mt-4 text-gray-700">
@@ -431,7 +431,7 @@ export default function WhyChooseUs() {
       {/* CTA Section */}
       <section className="py-16 px-4 md:px-6 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Join the MLZS Bilaspur Family</h2>
+          <h2 className="text-3xl font-bold mb-4">Join the SPGS Bilaspur Family</h2>
           <p className="max-w-2xl mx-auto mb-8 text-white/90">
             Experience holistic education that focuses on knowledge, life skills, and values. Give your child the
             advantage of a future-ready education.
