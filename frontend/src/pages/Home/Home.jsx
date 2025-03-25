@@ -58,7 +58,7 @@ const Home = () => {
       <Gallery cards={cards} />
       <School /> 
       <OurVideos />
-      <Testimonials />
+      <TestimonialSlider />
 
       <Apply />
       {/* <WhyChooseUs/> */}
