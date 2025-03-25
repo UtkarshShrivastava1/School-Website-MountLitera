@@ -88,11 +88,11 @@ const Navbar = () => {
         { name: 'Gallery', link: '/gallery' ,icon:< Image/>},
         { name: 'News & Events', link: '/news-events',icon:<Mails/>  },
         { name: 'School Notification', link: '/school-notification',icon:<Bell/> },
-        { name: 'EPFUTURE', link: '/epfuture' ,icon:<Braces/>},
+        // { name: 'EPFUTURE', link: '/epfuture' ,icon:<Braces/>},
         { name: 'Parent Visiting Hours', link: '/parent-visiting-hours',icon:<Clock6/> },
-        { name: 'Accolades', link: '/accolades',icon:<Medal/> },
+        // { name: 'Accolades', link: '/accolades',icon:<Medal/> },
         { name: 'House System', link: '/house-system' ,icon:<Users/>},
-        { name: 'View Issued Tcs', link: '/view-issued-tcs',icon:<Bug /> },
+        // { name: 'View Issued Tcs', link: '/view-issued-tcs',icon:<Bug /> },
         { name: 'Guidelines For Parents', link: '/guidelines-for-parents',icon:<NotebookText/> },
       ]
     },
@@ -124,7 +124,7 @@ const Navbar = () => {
   return (
     <div className="w-full ">
       {/* Top Navbar - Burgundy Background */}
-      <div className="bg-gradient-to-r from-red-700 to-[#800000] text-white py-3 px-4 md:px-8">
+      <div className="bg-gradient-to-r from-[#191f5d] to-[#191f5d] text-white py-3 px-4 md:px-8">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo and Title */}
           <div className="flex items-center space-x-3">

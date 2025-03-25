@@ -6,7 +6,7 @@ const LocationSection = () => {
       <div className="text-center mb-12">
         <div className="flex items-center justify-center mb-10">
           <div className="w-1/4 h-px bg-gray-300"></div>
-          <h2 className="text-3xl md:text-4xl font-serif text-red-800 px-6">
+          <h2 className="text-3xl md:text-4xl font-serif text-orange-700 px-6">
             Our Location
           </h2>
           <div className="w-1/4 h-px bg-gray-300"></div>
@@ -17,14 +17,14 @@ const LocationSection = () => {
         {/* Location Information - Left Side */}
         <div>
           <div className="space-y-6 border-2 border-red-600 rounded-lg p-6 shadow-md">
-            <p className="text-xl md:text-3xl font-medium text-red-800">
-              Mount Litera Zee School Bilaspur
+            <p className="text-xl md:text-3xl font-medium text-[#f25811]">
+            Shree Padmakshi Global School
             </p>
 
             <p className="text-base md:text-lg">
               You can find{" "}
-              <span className="font-semibold">Mount Litera Zee School</span> at
-              Uslapur, Bilaspur C.G., Bilaspur, Pincode- 495001.
+              <span className="font-semibold">Shree Padmakshi Global School</span> at
+              Main road, near over bridge, Uslapur, Bilaspur C.G., Pincode- 495001..
             </p>
 
             <p className="text-base md:text-lg">
@@ -33,7 +33,7 @@ const LocationSection = () => {
                 href="tel:9406430027"
                 className="text-teal-600 hover:text-teal-700 font-medium"
               >
-                9406430027, 9424130028
+                9111777295, 9424130028
               </a>{" "}
               or please refer to the map.
             </p>

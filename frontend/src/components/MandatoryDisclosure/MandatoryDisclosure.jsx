@@ -279,7 +279,7 @@ const SchoolPortal = () => {
             <div className="space-y-4">
               <div>
                 <h3 className="text-sm text-gray-500">School Name</h3>
-                <p className="font-medium">Mount Litera Zee School</p>
+                <p className="font-medium">Shree Padmakshi Global School</p>
               </div>
 
               <div>
@@ -311,7 +311,7 @@ const SchoolPortal = () => {
                 <h3 className="text-sm text-gray-500">Contact</h3>
                 <p className="font-medium">Phone: +91 9111777295</p>
                 <p className="font-medium">
-                  Email: mlzs.bilaspur@mountlitera.com
+                  Email: spgsbilaspur@gmail.com
                 </p>
                 <p className="font-medium">Website: www.mlzsbilaspur.edu</p>
               </div>
@@ -460,7 +460,7 @@ const SchoolPortal = () => {
             </div>
 
             {/* Academic Information */}
-            <div className="border rounded-lg">
+            {/* <div className="border rounded-lg">
               <button
                 className="w-full p-4 flex items-center justify-between"
                 onClick={() => toggleSection("academic")}
@@ -492,7 +492,7 @@ const SchoolPortal = () => {
                   </p>
                 </div>
               )}
-            </div>
+            </div> */}
 
             {/* Important Dates */}
             <div className="border rounded-lg p-4">

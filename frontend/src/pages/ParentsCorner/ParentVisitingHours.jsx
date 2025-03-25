@@ -1,5 +1,5 @@
 import React from 'react'
-import VisitingHoursPage  from '../../components/ParentsCorner/ParentVisitingHour'
+import VisitingHoursPage  from '../../components/ParentsCorner/ParentVisitingHours'
 
 
 const ParentVisiting = () => {
