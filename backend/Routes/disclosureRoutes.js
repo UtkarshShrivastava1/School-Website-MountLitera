@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const addDisclosure= require("../controllers/disclosureController");
+const {addDisclosure,getAllDisclosure}= require("../controllers/disclosureController");
 
 
 // Configure Multer for file uploads
@@ -16,6 +16,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 router.post("/addDisclosure", upload.single("file") ,addDisclosure);
+router.get("/",getAllDisclosure);
 
 
 module.exports = router;
