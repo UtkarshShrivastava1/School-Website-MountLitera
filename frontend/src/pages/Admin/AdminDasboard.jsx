@@ -108,7 +108,7 @@ function AdminDasboard() {
   ))}
 </ul>
         </aside>
-        <div className='w-[80%] my-auto overflow-hidden overflow-y-auto no-scrollbar'>
+        <div className='w-[80%] pt-5 overflow-hidden overflow-y-auto no-scrollbar'>
             {activeItem=== "events" && <EventForm/>}
             {activeItem=== "notice" && <NoticeForm/>}
             {activeItem=== "gallery" && <GalleryForm/>}
