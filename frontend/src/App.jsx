@@ -49,6 +49,8 @@ import Navbar from './components/Home/Navbar';
 import Footer from './components/Home/Footer';
 import AdminLogin from './pages/Admin/AdminLogin';
 import AdminDasboard from './pages/Admin/AdminDasboard';
+import Terms from './pages/Terms&Policy/Terms&Conditions';
+import Policy from './pages/Terms&Policy/PrivacyPolicy';
 
 function App() {
   return (
@@ -113,6 +115,8 @@ function AppContent() {
         <Route path="/admin/dashboard" element={<AdminDasboard />} />
         <Route path="/school-calendar" element={<SchoolCalendar />} />
         <Route path="/school-notifications" element={<SchoolNotification />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/policy" element={<Policy />} />
       </Routes>
       {!isAdminRoute && <Footer />}
     </>
