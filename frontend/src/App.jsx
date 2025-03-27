@@ -49,7 +49,7 @@ import Navbar from './components/Home/Navbar';
 import Footer from './components/Home/Footer';
 import AdminLogin from './pages/Admin/AdminLogin';
 import AdminDasboard from './pages/Admin/AdminDasboard';
-
+import GalleryDashboard from './pages/Admin/GalleryDashboard';
 function App() {
   return (
     <Router>
@@ -113,6 +113,7 @@ function AppContent() {
         <Route path="/admin/dashboard" element={<AdminDasboard />} />
         <Route path="/school-calendar" element={<SchoolCalendar />} />
         <Route path="/school-notifications" element={<SchoolNotification />} />
+        <Route path="/admin/gallery-dashboard" element={<GalleryDashboard />} />
       </Routes>
       {!isAdminRoute && <Footer />}
     </>
