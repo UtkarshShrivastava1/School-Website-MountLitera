@@ -7,25 +7,28 @@ const addDisclosure = async (req, res) => {
         console.log(req.body);
         const { type, title, description } = req.body;
         const fileUrl = req.file ? `/uploads/${req.file.filename}` : null;
+        const fileSizeInKB = req.file ? (req.file.size / 1024).toFixed(2) + " KB" : null;
+
         console.log("Uploaded file URL:", fileUrl);
         
         const newDisclosure = new Disclosure({
-            type, 
-            title, 
-            description, 
+            type,
+            title,
+            description,
             fileUrl,
-            date: new Date() // Automatically set current date
+            size: fileSize,
+            date: new Date()
         });
         
         await newDisclosure.save();
         res.status(201).json({
-            message: "Disclosure added successfully", 
+            message: "Disclosure added successfully",
             disclosure: newDisclosure
         });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
-}
+};
 
 const getAllDisclosure = async (req, res) => {
     try {
@@ -35,7 +38,7 @@ const getAllDisclosure = async (req, res) => {
         console.error(error.message);
         res.status(500).json({ message: "Server Error" });
     }
-} 
+}
 
 
 const downloadDisclosure = async (req, res) => {

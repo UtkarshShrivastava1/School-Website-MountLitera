@@ -17,10 +17,10 @@ const SchoolPortal = () => {
   const [activeFilter, setActiveFilter] = useState("all");
   const [documents, setDocuments] = useState([]);
   const [isLoading, setIsLoading] = useState({
-    documents: true
+    documents: true,
   });
   const [error, setError] = useState({
-    documents: null
+    documents: null,
   });
   const [searchQuery, setSearchQuery] = useState("");
   const [expandedSection, setExpandedSection] = useState(null);
@@ -32,10 +32,11 @@ const SchoolPortal = () => {
       established: "1985",
       affiliation: "Central Board of Secondary Education (CBSE)",
       affiliationNumber: "3330519",
-      address: "Main Road, Near Over Bridge Uslapur, Bilaspur C.G., Bilaspur Chhattisgarh, India 495001",
+      address:
+        "Main Road, Near Over Bridge Uslapur, Bilaspur C.G., Bilaspur Chhattisgarh, India 495001",
       contact: "+91 9111777295",
       email: "spgsbilaspur@gmail.com",
-      website: "www.mlzsbilaspur.edu"
+      website: "www.mlzsbilaspur.edu",
     },
     infrastructure: {
       totalCampusArea: "6179.83 SQ.MTR",
@@ -43,7 +44,7 @@ const SchoolPortal = () => {
       laboratories: "5 labs, 299.25 SQ.MTR",
       internetFacility: "YES",
       girlsToilets: "16",
-      boysToilets: "18"
+      boysToilets: "18",
     },
     facultyInfo: {
       teachers: "55",
@@ -51,35 +52,35 @@ const SchoolPortal = () => {
       nonTeachingStaff: "5",
       peons: "5",
       g4Staff: "14",
-      sweepers: "Not Available"
+      sweepers: "Not Available",
     },
     importantDates: {
       academicSession: "2024-25",
       sessionStartDate: "April 1, 2024",
       admissionPeriod: "January 15 - March 15, 2024",
-      examinationSchedule: "As per academic calendar"
-    }
+      examinationSchedule: "As per academic calendar",
+    },
   };
 
   useEffect(() => {
     // Fetch documents
     const fetchDocuments = async () => {
       try {
-        setIsLoading(prev => ({ ...prev, documents: true }));
-        const response = await fetch('http://localhost:5000/api/disclosure');
-        
+        setIsLoading((prev) => ({ ...prev, documents: true }));
+        const response = await fetch("http://localhost:5000/api/disclosure");
+
         if (!response.ok) {
-          throw new Error('Failed to fetch documents');
+          throw new Error("Failed to fetch documents");
         }
-        
+
         const data = await response.json();
         setDocuments(data);
         console.log(data);
-        setIsLoading(prev => ({ ...prev, documents: false }));
+        setIsLoading((prev) => ({ ...prev, documents: false }));
       } catch (err) {
-        console.error('Error fetching documents:', err);
-        setError(prev => ({ ...prev, documents: err.message }));
-        setIsLoading(prev => ({ ...prev, documents: false }));
+        console.error("Error fetching documents:", err);
+        setError((prev) => ({ ...prev, documents: err.message }));
+        setIsLoading((prev) => ({ ...prev, documents: false }));
       }
     };
 
@@ -123,7 +124,7 @@ const SchoolPortal = () => {
             {Object.entries(schoolInformation.basicInfo).map(([key, value]) => (
               <div key={key}>
                 <h3 className="text-sm text-gray-500 capitalize">
-                  {key.replace(/([A-Z])/g, ' $1').toLowerCase()}
+                  {key.replace(/([A-Z])/g, " $1").toLowerCase()}
                 </h3>
                 <p className="font-medium">{value}</p>
               </div>
@@ -163,14 +164,16 @@ const SchoolPortal = () => {
             </button>
             {expandedSection === "infrastructure" && (
               <div className="p-4 border-t space-y-4">
-                {Object.entries(schoolInformation.infrastructure).map(([key, value]) => (
-                  <div key={key}>
-                    <h3 className="text-sm text-gray-500 capitalize">
-                      {key.replace(/([A-Z])/g, ' $1').toLowerCase()}
-                    </h3>
-                    <p className="font-medium">{value}</p>
-                  </div>
-                ))}
+                {Object.entries(schoolInformation.infrastructure).map(
+                  ([key, value]) => (
+                    <div key={key}>
+                      <h3 className="text-sm text-gray-500 capitalize">
+                        {key.replace(/([A-Z])/g, " $1").toLowerCase()}
+                      </h3>
+                      <p className="font-medium">{value}</p>
+                    </div>
+                  )
+                )}
               </div>
             )}
           </div>
@@ -203,14 +206,16 @@ const SchoolPortal = () => {
             </button>
             {expandedSection === "faculty" && (
               <div className="p-4 border-t space-y-4">
-                {Object.entries(schoolInformation.facultyInfo).map(([key, value]) => (
-                  <div key={key}>
-                    <h3 className="text-sm text-gray-500 capitalize">
-                      {key.replace(/([A-Z])/g, ' $1').toLowerCase()}
-                    </h3>
-                    <p className="font-medium">{value}</p>
-                  </div>
-                ))}
+                {Object.entries(schoolInformation.facultyInfo).map(
+                  ([key, value]) => (
+                    <div key={key}>
+                      <h3 className="text-sm text-gray-500 capitalize">
+                        {key.replace(/([A-Z])/g, " $1").toLowerCase()}
+                      </h3>
+                      <p className="font-medium">{value}</p>
+                    </div>
+                  )
+                )}
               </div>
             )}
           </div>
@@ -223,14 +228,16 @@ const SchoolPortal = () => {
             </div>
 
             <div className="space-y-4">
-              {Object.entries(schoolInformation.importantDates).map(([key, value]) => (
-                <div key={key} className="flex justify-between items-center">
-                  <h3 className="text-sm text-gray-500 capitalize">
-                    {key.replace(/([A-Z])/g, ' $1').toLowerCase()}
-                  </h3>
-                  <p className="font-medium">{value}</p>
-                </div>
-              ))}
+              {Object.entries(schoolInformation.importantDates).map(
+                ([key, value]) => (
+                  <div key={key} className="flex justify-between items-center">
+                    <h3 className="text-sm text-gray-500 capitalize">
+                      {key.replace(/([A-Z])/g, " $1").toLowerCase()}
+                    </h3>
+                    <p className="font-medium">{value}</p>
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -368,53 +375,55 @@ const SchoolPortal = () => {
             </div>
           ) : (
             <div className="space-y-4">
-              {filteredDocuments.slice().reverse().map((doc) => (
-                
-                <div
-                  key={doc.id}
-                  className="border rounded-lg p-6 flex flex-col md:flex-row justify-between"
-                >
-                  <div>
-                    <div className="flex items-center space-x-2 text-sm text-gray-500 mb-1">
-                      {doc.type === "results" && (
-                        <FileText size={16} className="text-red-500" />
-                      )}
-                      {doc.type === "academic" && (
-                        <School size={16} className="text-blue-500" />
-                      )}
-                      <span className="capitalize">{doc.type}</span>
-                      {/* <span className="capitalize">{doc.fileUrl}</span> */}
-
-                    </div>
-                    <h3 className="font-medium text-lg mb-1">{doc.title}</h3>
-                    <p className="text-gray-600">{doc.description}</p>
-                    <div className="flex items-center mt-3 text-sm text-gray-500 space-x-6">
-                      {/* <div className="flex items-center space-x-1">
-                        <Clock size={14} />
-                        <span>Updated: {doc.updated}</span>
+              {filteredDocuments
+                .slice()
+                .reverse()
+                .map((doc) => (
+                  <div
+                    key={doc.id}
+                    className="border rounded-lg p-6 flex flex-col md:flex-row justify-between"
+                  >
+                    <div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-500 mb-1">
+                        {doc.type === "results" && (
+                          <FileText size={16} className="text-red-500" />
+                        )}
+                        {doc.type === "academic" && (
+                          <School size={16} className="text-blue-500" />
+                        )}
+                        <span className="capitalize">{doc.type}</span>
+                        {/* <span className="capitalize">{doc.fileUrl}</span> */}
                       </div>
-                      <div className="flex items-center space-x-1">
-                        <File size={14} />
-                        <span>Size: {doc.size}</span>
-                      </div> */}
-
+                      <h3 className="font-medium text-lg mb-1">{doc.title}</h3>
+                      <p className="text-gray-600">{doc.description}</p>
+                      <div className="flex items-center mt-3 text-sm text-gray-500 space-x-6">
+                        <div className="flex items-center space-x-1">
+                          <Clock size={14} />
+                          <span>
+                            Created: {new Date(doc.date).toLocaleString()}
+                          </span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <File size={14} />
+                          <span>Size: {doc.size}</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="mt-4 md:mt-0 md:ml-6 flex items-center">
-                    <button
-                      onClick={() => handleDownload(doc._id)}
-                      className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                      <Download size={18} />
-                      <span>Download</span>
-                    </button>
-                    {/* <a href={`http://localhost:5000${doc.fileUrl}`} 
+                    <div className="mt-4 md:mt-0 md:ml-6 flex items-center">
+                      <button
+                        onClick={() => handleDownload(doc._id)}
+                        className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer"
+                      >
+                        <Download size={18} />
+                        <span>Download</span>
+                      </button>
+                      {/* <a href={`http://localhost:5000${doc.fileUrl}`}
                     target="_blank"
                     rel="noreferrer noopener"
                     >sgs</a> */}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           )}
         </div>
