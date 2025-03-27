@@ -17,8 +17,7 @@ const disclosureSchema = new mongoose.Schema({
         type: String,
         required: true,
     },size: {
-        type: Number,
-        required: true,
+        type: String,
     },
     date: {
         type: Date, default: Date.now

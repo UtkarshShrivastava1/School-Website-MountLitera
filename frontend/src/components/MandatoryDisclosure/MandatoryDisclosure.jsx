@@ -74,6 +74,7 @@ const SchoolPortal = () => {
         }
 
         const data = await response.json();
+        // console.log(data)
         setDocuments(data);
         console.log(data);
         setIsLoading((prev) => ({ ...prev, documents: false }));
@@ -94,13 +95,23 @@ const SchoolPortal = () => {
     );
   };
 
-  const filteredDocuments = documents.filter((doc) => {
+  // const filteredDocuments = documents.filter((doc) => {
+  //   const matchesFilter = activeFilter === "all" || doc.type === activeFilter;
+  //   const matchesSearch =
+  //     doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  //     doc.description.toLowerCase().includes(searchQuery.toLowerCase());
+  //   return matchesFilter && matchesSearch;
+  // });
+
+  const filteredDocuments = documents
+  .filter((doc) => {
     const matchesFilter = activeFilter === "all" || doc.type === activeFilter;
     const matchesSearch =
       doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       doc.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesFilter && matchesSearch;
-  });
+  })
+  .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const toggleSection = (section) => {
     setExpandedSection(expandedSection === section ? null : section);
@@ -376,8 +387,6 @@ const SchoolPortal = () => {
           ) : (
             <div className="space-y-4">
               {filteredDocuments
-                .slice()
-                .reverse()
                 .map((doc) => (
                   <div
                     key={doc.id}

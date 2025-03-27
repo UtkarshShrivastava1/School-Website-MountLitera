@@ -16,7 +16,7 @@ const addDisclosure = async (req, res) => {
             title,
             description,
             fileUrl,
-            size: fileSize,
+            size: fileSizeInKB,
             date: new Date()
         });
         
