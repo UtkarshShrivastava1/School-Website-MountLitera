@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { LogOut} from "lucide-react"
-import Logo from '../../assets/logo.jpg';
+import Logo from '../../assets/Media.jpg';
 import { Menu, X, Calendar, Bell, User } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import NoticeForm from './NoticeForm';

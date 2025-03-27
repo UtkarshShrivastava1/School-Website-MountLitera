@@ -55,11 +55,11 @@ const WhyMountLetraZee = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+      <div className="bg-gradient-to-r from-[#191f5d] to-[#191f5d] text-white">
         <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-8 md:mb-0">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Why Choose SHREE PADMAKSHI GLOBAL SCHOOL?</h1>
+              <h1 className="text-4xl md:text-5xl font-medium mb-6">Why Choose SHREE PADMAKSHI GLOBAL SCHOOL?</h1>
               <p className="text-xl md:text-2xl">
                 Empowering young minds to excel in academics and life with our comprehensive approach to education.
               </p>
@@ -135,20 +135,7 @@ const WhyMountLetraZee = () => {
             ))}
           </div>
         </div>
-
-    
-      
-
-       
-       
-
-       
-        
-       
-       
-      </div>
-
-      
+      </div>      
     </div>
   );
 };

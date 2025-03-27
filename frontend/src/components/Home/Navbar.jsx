@@ -50,17 +50,13 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", link: "/", dropdown: false },
     {
-      name: "About",
+      name: "About Us",
       link: "#",
       dropdown: true,
       dropdownItems: [
         { name: "Our School", link: "/our-school", icon: <School className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
        
-        { name: "Our Mission",
-           link: "/our-mission",
-            icon: <ShieldMinus className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
-
-        { name: "Our Vision",
+        { name: "Our Vision and Mission",
            link: "/our-vision",
            icon: <Eye className="sm:h-5 sm:w-5 md:h-6 md:w-6" /> },
 
@@ -91,7 +87,7 @@ const Navbar = () => {
       link: "#",
       dropdown: true,
       dropdownItems: [
-        { name: "Why MLZS", link: "/why-mlzs", icon: <CircleHelp  className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
+        { name: "Why SPGS", link: "/why-mlzs", icon: <CircleHelp  className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
         {
           name: "Academics Pre-Primary",
           link: "/academics-pre-primary",
@@ -143,13 +139,13 @@ const Navbar = () => {
       dropdown: true,
       dropdownItems: [
         { name: "Our Campus", link: "/our-campus", icon: <School className="sm:h-5 sm:w-5 md:h-6 md:w-6" /> },
-        { name: "Hi-Tech Classes", link: "/hi-tech-classes", icon: <Wifi className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
+        // { name: "Hi-Tech Classes", link: "/hi-tech-classes", icon: <Wifi className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
         { name: "Faculty", link: "/faculty", icon: <SquareUserRound className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
-        {
-          name: "Security & CCTV Surveillance",
-          link: "/security-cctv-surveillance",
-          icon: <Cctv className="sm:h-5 sm:w-5 md:h-6 md:w-6"/>,
-        },
+        // {
+        //   name: "Security & CCTV Surveillance",
+        //   link: "/security-cctv-surveillance",
+        //   icon: <Cctv className="sm:h-5 sm:w-5 md:h-6 md:w-6"/>,
+        // },
         {
           name: "Sport Facilities",
           link: "/sport-facilities",
@@ -189,15 +185,15 @@ const Navbar = () => {
           link: "/school-notification",
           icon: <Bell className="sm:h-5 sm:w-5 md:h-6 md:w-6"/>,
         },
-        { name: "EPFUTURE", link: "/epfuture", icon: <Braces className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
+        // { name: "EPFUTURE", link: "/epfuture", icon: <Braces className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
         {
           name: "Parent Visiting Hours",
           link: "/parent-visiting-hours",
           icon: <Clock6 className="sm:h-5 sm:w-5 md:h-6 md:w-6"/>,
         },
-        { name: "Accolades", link: "/accolades", icon: <Medal className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
+        // { name: "Accolades", link: "/accolades", icon: <Medal className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
         { name: "House System", link: "/house-system", icon: <Users className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
-        { name: "View Issued Tcs", link: "/view-issued-tcs", icon: <Bug className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
+        // { name: "View Issued Tcs", link: "/view-issued-tcs", icon: <Bug className="sm:h-5 sm:w-5 md:h-6 md:w-6"/> },
         {
           name: "Guidelines For Parents",
           link: "/guidelines-for-parents",
@@ -329,7 +325,7 @@ const Navbar = () => {
                     onClick={() =>
                       !item.dropdown && handleNavigation(item.link)
                     }
-                    className="inline-flex items-center px-2 py-2 text-sm font-medium transition-colors duration-200 
+                    className="inline-flex items-center px-1 py-2 text-sm font-medium transition-colors duration-200 
                     text-gray-800 hover:text-red-700 hover:bg-gray-100 rounded uppercase cursor-pointer"
                   >
                     {item.name}
@@ -360,7 +356,7 @@ const Navbar = () => {
                               onClick={() =>
                                 handleNavigation(dropdownItem.link)
                               }
-                              className="w-full flex items-center px-6 py-3 gap-2 text-gray-800 hover:text-red-700 hover:bg-gray-200"
+                              className="w-full flex items-center px-6 py-3 gap-2 cursor-pointer text-gray-800 hover:text-red-700 hover:bg-gray-200"
                             >
                               {dropdownItem.icon}
                               {dropdownItem.name}

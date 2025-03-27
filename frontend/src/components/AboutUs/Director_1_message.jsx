@@ -5,16 +5,16 @@ const Directors_1_message = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
       {/* Hero Section with Director's Photo */}
-      <div className="relative bg-gradient-to-r from-gray-100 to-orange-100 py-24">
+      <div className="relative bg-gradient-to-r from-[#191f5d] to-indigo-800 py-24">
         <div className="absolute inset-0 opacity-10">
           <div className="w-full h-full bg-[url('/api/placeholder/1920/600')] bg-cover bg-center"></div>
         </div>
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 text-gray-700 mb-10 md:mb-0">
+            <div className="md:w-1/2 text-white mb-10 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Director's Message</h1>
               <div className="h-1 w-20 bg-yellow-400 mb-6"></div>
-              <p className="text-xl text-gray-500">Words of wisdom and vision from our leader</p>
+              <p className="text-xl text-white">Words of wisdom and vision from our leader</p>
             </div>
             <div className="md:w-1/2 flex justify-center md:justify-end">
               <div className="relative">
@@ -46,7 +46,7 @@ const Directors_1_message = () => {
               <blockquote className="italic text-xl text-gray-700 mb-4">
                 "An Investment in knowledge pays the best interest"
               </blockquote>
-              <div className="h-0.5 w-20 bg-red-800 mx-auto"></div>
+              <div className="h-0.5 w-20 bg-orange-500 mx-auto"></div>
             </div>
           </div>
           
@@ -140,10 +140,10 @@ const Directors_1_message = () => {
             Visit our campus to see how we're creating a nurturing environment for your child's education and development.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-lg transition duration-300 shadow-lg">
+            <button className="bg-white hover:bg-orange-400 hover:text-white text-blue-900 font-bold py-3 px-8 rounded-lg transition duration-300 shadow-lg">
               Schedule a Visit
             </button>
-            <button className="bg-transparent hover:bg-blue-800 border-2 border-white text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+            <button className="bg-transparent hover:bg-blue-600 border-2 border-white text-white font-bold py-3 px-8 rounded-lg transition duration-300">
               Contact Us
             </button>
           </div>
@@ -172,7 +172,7 @@ const Directors_1_message = () => {
                   <p className="text-gray-700 mt-2">{item.description}</p>
                 </div>
                 
-                <div className="z-10 flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold shadow-lg">
+                <div className="z-10 flex-shrink-0 w-12 h-12 rounded-full bg-[#191f5d] text-white flex items-center justify-center font-bold shadow-lg">
                   {item.year}
                 </div>
                 

@@ -50,6 +50,8 @@ import Footer from './components/Home/Footer';
 import AdminLogin from './pages/Admin/AdminLogin';
 import AdminDasboard from './pages/Admin/AdminDasboard';
 import Director_1_Message from './pages/About/Director_1Message';
+// import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
