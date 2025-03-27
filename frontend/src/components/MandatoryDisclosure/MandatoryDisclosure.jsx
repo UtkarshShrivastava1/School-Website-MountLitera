@@ -74,6 +74,7 @@ const SchoolPortal = () => {
         
         const data = await response.json();
         setDocuments(data);
+        console.log(data);
         setIsLoading(prev => ({ ...prev, documents: false }));
       } catch (err) {
         console.error('Error fetching documents:', err);
@@ -388,29 +389,29 @@ const SchoolPortal = () => {
                     <h3 className="font-medium text-lg mb-1">{doc.title}</h3>
                     <p className="text-gray-600">{doc.description}</p>
                     <div className="flex items-center mt-3 text-sm text-gray-500 space-x-6">
-                      <div className="flex items-center space-x-1">
+                      {/* <div className="flex items-center space-x-1">
                         <Clock size={14} />
                         <span>Updated: {doc.updated}</span>
                       </div>
                       <div className="flex items-center space-x-1">
                         <File size={14} />
                         <span>Size: {doc.size}</span>
-                      </div>
+                      </div> */}
 
                     </div>
                   </div>
                   <div className="mt-4 md:mt-0 md:ml-6 flex items-center">
-                    {/* <button
-                      onClick={() => handleDownload(doc.id)}
+                    <button
+                      onClick={() => handleDownload(doc._id)}
                       className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                     >
                       <Download size={18} />
                       <span>Download</span>
-                    </button> */}
-                    <a href={`http://localhost:5000${doc.fileUrl}`} 
+                    </button>
+                    {/* <a href={`http://localhost:5000${doc.fileUrl}`} 
                     target="_blank"
                     rel="noreferrer noopener"
-                    >sgs</a>
+                    >sgs</a> */}
                   </div>
                 </div>
               ))}
