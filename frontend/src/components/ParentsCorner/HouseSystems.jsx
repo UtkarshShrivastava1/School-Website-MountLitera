@@ -8,10 +8,15 @@ const HouseSystems = () => {
        <section className="py-16 bg-gradient-to-b from-indigo-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center mb-12">
-            <p className="text-base font-semibold tracking-wide uppercase text-indigo-600">Competitions</p>
-            <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Inter-house Competitions
-            </h2>
+          <span className="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+          Competitions
+        </span>
+            <div className="flex items-center justify-center mb-10">
+        <div className="w-1/4 h-px bg-gray-300"></div>
+        <h2 className="text-3xl md:text-4xl font-serif text-orange-700 px-6"> Inter-house Competitions</h2>
+        <div className="w-1/4 h-px bg-gray-300"></div>
+      </div>
+           
             <p className="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
               We understand the importance of competitions for children as they progress through school
             </p>

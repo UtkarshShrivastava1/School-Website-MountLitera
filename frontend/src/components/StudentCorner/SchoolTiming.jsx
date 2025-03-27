@@ -26,7 +26,7 @@ const SchoolTimings = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="flex items-center justify-center mb-10">
         <div className="w-1/4 h-px bg-gray-300"></div>
-        <h2 className="text-3xl md:text-4xl font-serif text-red-800 px-6">School Timing</h2>
+        <h2 className="text-3xl md:text-4xl font-serif text-orange-700 px-6">School Timing</h2>
         <div className="w-1/4 h-px bg-gray-300"></div>
       </div>
       <p className="text-center text-gray-600 mb-8">

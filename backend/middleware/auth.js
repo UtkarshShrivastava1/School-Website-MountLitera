@@ -10,7 +10,6 @@ exports.protect = async (req, res, next) => {
       token = req.headers.authorization.split(' ')[1];
     }
 
-    // Check if token exists
     if (!token) {
       return res.status(401).json({
         success: false,
@@ -19,13 +18,10 @@ exports.protect = async (req, res, next) => {
     }
 
     try {
-      // Verify token
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-
-      // Attach admin to request object
       req.admin = decoded;
 
-      // Check if admin still exists
+      // Verify admin existence
       const adminExists = await Admin.findById(decoded.id);
       if (!adminExists) {
         return res.status(401).json({
@@ -46,6 +42,25 @@ exports.protect = async (req, res, next) => {
     res.status(500).json({
       success: false,
       message: 'Server error, please try again later'
+    });
+  }
+};
+
+// Simplified admin check without role field
+exports.isAdmin = (req, res, next) => {
+  try {
+    if (!req.admin) {
+      return res.status(403).json({
+        success: false,
+        message: 'Admin privileges required'
+      });
+    }
+    next();
+  } catch (error) {
+    console.error('Admin check error:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Server error during admin verification'
     });
   }
 };

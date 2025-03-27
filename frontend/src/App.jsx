@@ -113,7 +113,6 @@ function AppContent() {
         <Route path="/admin/dashboard" element={<AdminDasboard />} />
         <Route path="/school-calendar" element={<SchoolCalendar />} />
         <Route path="/school-notifications" element={<SchoolNotification />} />
-        {/* Add more routes as needed */}
       </Routes>
       {!isAdminRoute && <Footer />}
     </>
