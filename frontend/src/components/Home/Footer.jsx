@@ -218,7 +218,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="text-gray-500 mt-2 sm:mt-0">
-            Copyright © 2024 All rights reserved.
+            Copyright © 2025 All rights reserved.
           </div>
         </div>
       </div>
