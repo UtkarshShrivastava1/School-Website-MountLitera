@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Menu, X, Calendar, Bell, User } from 'lucide-react';
+import { Menu, X, Calendar, Bell, User, Icon, icons } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import Logo from '../../assets/logo.jpg';
+import Logo from '../../assets/Logo.jpg';
+import {  School, MessageCircle, NotebookText, Scale ,Eye,ShieldMinus, CircleGauge,Medal,Cctv,HouseWifi, CircleHelp ,Users,MapPin, Phone , ReceiptText,Calendar1,Mails, Image, Clock6 ,Wifi , SquareUserRound ,Newspaper,Bug,Braces  } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,13 +32,13 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'Our School', link: '/our-school' },
-        { name: 'Mount Litera Zee Schools', link: '/mount-litera-zee-schools' },
-        { name: 'Our Mission', link: '/our-mission' },
-        { name: 'Our Vision', link: '/our-vision' },
-        { name: 'Director Message', link: '/director-message' },
-        { name: 'Principal Message', link: '/principal-message' },
-        { name: 'Value Education', link: '/value-education' },
+        { name: 'Our School', link: '/our-school',icon:   <School />, },
+        { name: 'Mount Litera Zee Schools', link: '/mount-litera-zee-schools',icon:   <School /> },
+        { name: 'Our Mission', link: '/our-mission',icon:   <ShieldMinus/> },
+        { name: 'Our Vision', link: '/our-vision',icon:<Eye/>  },
+        { name: 'Director Message', link: '/director-message' ,icon:<MessageCircle/>},
+        { name: 'Principal Message', link: '/principal-message' ,icon:<MessageCircle/>},
+        { name: 'Value Education', link: '/value-education' ,icon:<MessageCircle/>},
       ]
     },
     { 
@@ -45,11 +46,11 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'Why MLZS', link: '/why-mlzs' },
-        { name: 'Academics Pre-Primary', link: '/academics-pre-primary' },
-        { name: 'Academics: Primary', link: '/academics-primary' },
-        { name: 'Academics: Middle', link: '/academics-middle' },
-        { name: 'Beyond Academics', link: '/beyond-academics' },
+        { name: 'Why MLZS', link: '/why-mlzs',icon:<CircleHelp/> },
+        { name: 'Academics Pre-Primary', link: '/academics-pre-primary',icon:<Users/> },
+        { name: 'Academics: Primary', link: '/academics-primary',icon:<Users/> },
+        { name: 'Academics: Middle', link: '/academics-middle',icon:<Users/>},
+        { name: 'Beyond Academics', link: '/beyond-academics',icon:<Users/> },
       ]
     },
     { 
@@ -57,10 +58,10 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'Guidelines & Procedures', link: '/guidelines-procedures' },
-        { name: 'School Rules & Regulations', link: '/school-rules-regulations' },
-        { name: 'Withdrawal Policy', link: '/withdrawal-policy' },
-        { name: 'Enquiry Form', link: '/enquiry-form' },
+        { name: 'Guidelines & Procedures', link: '/guidelines-procedures' ,icon:<NotebookText/>},
+        { name: 'School Rules & Regulations', link: '/school-rules-regulations',icon:<Scale/> },
+        { name: 'Withdrawal Policy', link: '/withdrawal-policy',icon:<ReceiptText/> },
+        { name: 'Enquiry Form', link: '/enquiry-form',icon:<ReceiptText/> },
       ]
     },
     { 
@@ -68,13 +69,13 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'Our Campus', link: '/our-campus' },
-        { name: 'Hi-Tech Classes', link: '/hi-tech-classes' },
-        { name: 'Faculty', link: '/faculty' },
-        { name: 'Security & CCTV Surveillance', link: '/security-cctv-surveillance' },
-        { name: 'Sport Facilities', link: '/sport-facilities' },
-        { name: 'Transport Facilities', link: '/transport-facilities' },
-        { name: 'IT Infrastructure', link: '/it-infrastructure' },
+        { name: 'Our Campus', link: '/our-campus' , icon : <School />},
+        { name: 'Hi-Tech Classes', link: '/hi-tech-classes',icon:<Wifi/> },
+        { name: 'Faculty', link: '/faculty', icon:< SquareUserRound/> },
+        { name: 'Security & CCTV Surveillance', link: '/security-cctv-surveillance',icon:<Cctv/> },
+        { name: 'Sport Facilities', link: '/sport-facilities',icon:<Medal/> },
+        { name: 'Transport Facilities', link: '/transport-facilities',icon:<CircleGauge/> },
+        { name: 'IT Infrastructure', link: '/it-infrastructure',icon:    <HouseWifi /> },
       ]
     },
     { 
@@ -82,17 +83,17 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'School Calendar', link: '/school-calendar' },
-        { name: 'Fee Structure', link: '/fee-structure' },
-        { name: 'Gallery', link: '/gallery' },
-        { name: 'News & Events', link: '/news-events' },
-        { name: 'School Notification', link: '/school-notification' },
-        { name: 'EPFUTURE', link: '/epfuture' },
-        { name: 'Parent Visiting Hours', link: '/parent-visiting-hours' },
-        { name: 'Accolades', link: '/accolades' },
-        { name: 'House System', link: '/house-system' },
-        { name: 'View Issued Tcs', link: '/view-issued-tcs' },
-        { name: 'Guidelines For Parents', link: '/guidelines-for-parents' },
+        { name: 'School Calendar', link: '/school-calendar',icon:<Calendar1/> },
+        { name: 'Fee Structure', link: '/fee-structure',icon:<ReceiptText/> },
+        { name: 'Gallery', link: '/gallery' ,icon:< Image/>},
+        { name: 'News & Events', link: '/news-events',icon:<Mails/>  },
+        { name: 'School Notification', link: '/school-notification',icon:<Bell/> },
+        // { name: 'EPFUTURE', link: '/epfuture' ,icon:<Braces/>},
+        { name: 'Parent Visiting Hours', link: '/parent-visiting-hours',icon:<Clock6/> },
+        // { name: 'Accolades', link: '/accolades',icon:<Medal/> },
+        { name: 'House System', link: '/house-system' ,icon:<Users/>},
+        // { name: 'View Issued Tcs', link: '/view-issued-tcs',icon:<Bug /> },
+        { name: 'Guidelines For Parents', link: '/guidelines-for-parents',icon:<NotebookText/> },
       ]
     },
     { 
@@ -100,10 +101,10 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'Student Guidelines', link: '/student-guidelines' },
-        { name: 'School Uniform', link: '/school-uniform' },
-        { name: 'School Timing', link: '/school-timing' },
-        { name: 'Attendance Policy', link: '/attendance-policy' }
+        { name: 'Student Guidelines', link: '/student-guidelines',icon:<NotebookText/> },
+        { name: 'School Uniform', link: '/school-uniform',icon:<ShieldMinus/> },
+        { name: 'School Timing', link: '/school-timing',icon:<Clock6/> },
+        { name: 'Attendance Policy', link: '/attendance-policy',icon:<Users/> },
       ]
     },
     { 
@@ -111,25 +112,26 @@ const Navbar = () => {
       link: '#', 
       dropdown: true,
       dropdownItems: [
-        { name: 'Contact', link: '/contact' },
-        { name: 'Careers', link: '/careers' },
-        { name: 'Our Location', link: '/our-location' }
+        { name: 'Contact', link: '/contact',icon:<Phone/> },
+        { name: 'Careers', link: '/careers',icon:<Users/> },
+        { name: 'Our Location', link: '/our-location' ,icon:<MapPin
+        />},
       ]
     },
     { name: 'Mandatory Disclosure', link: '/mandatory-disclosure', dropdown: false }
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       {/* Top Navbar - Burgundy Background */}
-      <div className="bg-blue-600 text-white py-3 px-4 md:px-8">
+      <div className="bg-gradient-to-r from-[#191f5d] to-[#191f5d] text-white py-3 px-4 md:px-8">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo and Title */}
           <div className="flex items-center space-x-3">
             <img src={Logo} alt="School Logo" className="w-15 h-full rounded-full bg-white" />
             <div className="hidden md:block">
-              <h1 className="text-2xl md:text-3xl font-serif">Mount Litera Zee School Bilaspur</h1>
-              <p className="text-sm text-gray-200">CBSE Affiliation No: 3330519</p>
+              <h1 className="text-2xl md:text-3xl font-serif ">Mount Litera Zee School Bilaspur</h1>
+              <p className="text-sm ">CBSE Affiliation No: 3330519</p>
             </div>
           </div>
           
@@ -144,13 +146,13 @@ const Navbar = () => {
             {/* Quick Access Icons - Desktop */}
             <div className="hidden md:flex items-center space-x-6">
               {/* News Icon */}
-              <div className="flex flex-col items-center cursor-pointer">
+              <div className="flex flex-col items-center cursor-pointer" onClick={() => handleNavigation('/school-notifications')}>
                 <Bell className="h-5 w-5 text-yellow-200" />
                 <span className="text-xs text-yellow-200 mt-1">NEWS</span>
               </div>
               
               {/* Calendar Icon */}
-              <div className="flex flex-col items-center cursor-pointer">
+              <div className="flex flex-col items-center cursor-pointer" onClick={() => handleNavigation('/school-calendar')}>
                 <Calendar className="h-5 w-5 text-yellow-200" />
                 <span className="text-xs text-yellow-200 mt-1">CALENDAR</span>
               </div>
@@ -186,11 +188,11 @@ const Navbar = () => {
                   <button 
                     onClick={() => !item.dropdown && handleNavigation(item.link)}
                     className="inline-flex items-center px-2 py-2 text-sm font-medium transition-colors duration-200 
-                      text-gray-800 hover:text-blue-700 hover:bg-gray-100 rounded uppercase"
+                      text-gray-800 hover:text-red-700 hover:bg-gray-100 rounded uppercase cursor-pointer"
                   >
                     {item.name}
                     {item.dropdown && (
-                      <svg className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:transform group-hover:rotate-180" 
+                      <svg className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:transform group-hover:rotate-180 cursor-pointer" 
                         fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
@@ -198,21 +200,39 @@ const Navbar = () => {
                   </button>
                   
                   {/* Desktop Hover Dropdown */}
-                  {item.dropdown && (
-                    <div className="absolute left-0 mt-2 w-64 bg-gray-800 rounded-none shadow-lg invisible group-hover:visible transition-all duration-300 opacity-0 group-hover:opacity-100 z-50">
+                  {/* {item.dropdown && (
+                    <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg invisible group-hover:visible transition-all duration-300 opacity-0 group-hover:opacity-100 z-50 flex flex-col items-center">
                       <div className="py-2">
                         {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                           <button 
                             key={dropdownIndex} 
                             onClick={() => handleNavigation(dropdownItem.link)}
-                            className="block px-6 py-3 transition-colors duration-200 text-white hover:text-gray-200 border-b border-gray-700 hover:bg-gray-700"
-                          >
+                            className="w-full block px-6 py-3 transition-colors duration-200 text-black hover:text-black border-b 1px border-gray-700 hover:bg-gray-100  align-middle"
+                          >{dropdownItem.icon}
                             {dropdownItem.name}
                           </button>
                         ))}
                       </div>
                     </div>
-                  )}
+                  )} */}
+
+{item.dropdown && (
+  <div className="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-lg invisible group-hover:visible transition-all duration-300 opacity-0 group-hover:opacity-100 z-50 flex flex-col  cursor-pointer ">
+    <div className="py-2 w-full flex flex-col items-center">
+      {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
+        <button 
+          key={dropdownIndex} 
+          onClick={() => handleNavigation(dropdownItem.link)}
+          className="w-full px-6 py-3 flex items-center justify-self-start gap-2 text-black hover:text-red-700 border-b border-gray-700 hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
+    >
+          {dropdownItem.icon}
+          {dropdownItem.name}
+        </button>
+      ))}
+    </div>
+  </div>
+)}
+
                 </div>
               ))}
             </div>
@@ -263,12 +283,12 @@ const Navbar = () => {
                   
                   {/* Mobile Dropdown */}
                   {item.dropdown && activeDropdown === index && (
-                    <div className="bg-gray-800 py-2">
+                    <div className="bg-white py-2">
                       {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                         <button
                           key={dropdownIndex}
                           onClick={() => handleNavigation(dropdownItem.link)}
-                          className="block px-4 py-3 text-sm text-white hover:text-gray-200 hover:bg-gray-700 border-b border-gray-700"
+                          className="w-full block px-4 py-3 text-sm text-black hover:text-black hover:bg-gray-200 border-b border-gray-700"
                         >
                           {dropdownItem.name}
                         </button>

@@ -1,12 +1,11 @@
 import React from 'react'
-
-import ApplySteps from '../../components/contact/Steps'
+import CareersPage from '../../components/contact/Steps'
 
 const Careers = () => {
   return (
     <>
         
-        <ApplySteps />
+        <CareersPage />
        
     </>
   )

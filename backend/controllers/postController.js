@@ -1,4 +1,4 @@
-const Post = require('../models/Post');
+const Post = require('../models/Post.js');
 const cloudinary = require('../config/cloudinary');
 
 // Helper function to handle Cloudinary uploads

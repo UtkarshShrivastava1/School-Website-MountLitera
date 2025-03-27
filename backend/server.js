@@ -20,6 +20,7 @@ app.use("/details", require("./Routes/DetailsRoutes"));
 app.use("/api/leaves", require("./Routes/LeaveRoutes"));
 app.use("/api/notices", require("./Routes/NoticeRoutes"));
 app.use("/api/posts", require("./Routes/postRoutes"));
+app.use("/api/disclosure", require("./Routes/disclosureRoutes"));
 
 // Error Handling
 app.use(errorHandler);

@@ -19,7 +19,7 @@ const EventForm = () => {
     // setDate('');
 
     try {
-      const response = axios.post('http://localhost:3000/events', eventData);
+      const response = axios.post('http://localhost:5000/events', eventData);
       // console.log(response.data);
       alert('Event created successfully');
       setTitle('');
@@ -33,11 +33,12 @@ const EventForm = () => {
 
   return (
     <div className="max-w-md mx-auto mt-10 p-5  border-gray-300 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-5 text-center">Create Event</h2>
+      <h2 className="text-3xl font-bold mb-2  text-center">Create Event</h2>
+      <hr className='text-gray-400 mb-2'/>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">
-            Title
+            Title:
           </label>
           <input
             type="text"
@@ -50,7 +51,7 @@ const EventForm = () => {
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
-            Description
+            Description:
           </label>
           <textarea
             id="description"
@@ -63,7 +64,7 @@ const EventForm = () => {
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="date">
-            Date
+            Date:
           </label>
           <input
             type="date"
@@ -75,12 +76,16 @@ const EventForm = () => {
           />
         </div>
         <div className="flex items-center justify-between">
-          <button
+          {/* <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-[#191f5d] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline  transition-all ease-in-out cursor-pointer"
           >
             Create Event
-          </button>
+          </button> */}
+
+          <button type="submit" className="font-bold px-4 bg-[#f25811] text-white py-2 rounded-lg hover:bg-[rgb(242,88,17)] transition-all ease-in-out cursor-pointer">
+          Create Event
+        </button>
         </div>
       </form>
     </div>

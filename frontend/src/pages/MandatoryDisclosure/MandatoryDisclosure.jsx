@@ -1,10 +1,12 @@
 import React from 'react'
-import MandatoryDisclosurePage from '../../components/Mandatory Disclosure/MandatoryDisclosure'
+import MandatoryPage from '../../components/MandatoryDisclosure/MandatoryDisclosure'
 
 const MandatoryDisclosure = () => {
   return (
     <>
-    <MandatoryDisclosurePage /> 
+   
+    <MandatoryPage />
+    
     </>
   )
 }

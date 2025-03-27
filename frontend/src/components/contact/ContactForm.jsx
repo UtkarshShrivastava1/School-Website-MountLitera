@@ -28,35 +28,35 @@ const ContactPage = () => {
     <div className="min-h-screen p-15">
       {/* Page Title Section */}
       <div className="text-center mb-12 max-w-6xl mx-auto">
-      <div className="flex items-center justify-center mb-10">
-        <div className="w-1/4 h-px bg-gray-300"></div>
-        <h2 className="text-3xl md:text-4xl font-serif text-red-800 px-6">Contact Us</h2>
-        <div className="w-1/4 h-px bg-gray-300"></div>
-      </div>
+        <div className="flex items-center justify-center mb-10">
+          <div className="w-1/4 h-px bg-gray-300"></div>
+          <h2 className="text-3xl md:text-4xl font-serif text-orange-700 px-6">Contact Us</h2>
+          <div className="w-1/4 h-px bg-gray-300"></div>
+        </div>
       </div>
 
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
         {/* Left Column with Border */}
-        <div className="lg:w-1/2 border-2 border-red-100 rounded-lg p-6 bg-white shadow-lg">
+        <div className="lg:w-1/2 border-2 border-[#f25811]/20 rounded-lg p-6 bg-white shadow-lg">
           <div className="mb-6">
-            <button className="bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium">
+            <button className="bg-[#f25811]/10 text-[#f25811] px-4 py-2 rounded-full text-sm font-medium">
               Get In Touch
             </button>
           </div>
 
-          <h2 className="text-3xl font-bold mb-4">Have Questions?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-[#191f5d]">Have Questions?</h2>
 
           <p className="text-gray-600 mb-8">
             Our HR team is here to help you with any questions about careers at
-            Mount Litera Zee School.
+            Shree Padmakshi Global School 
           </p>
 
           <div className="space-y-6">
-            <div className="flex items-center gap-4 p-4 border border-gray-100 rounded-lg hover:bg-red-50 transition duration-300">
-              <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+            <div className="flex items-center gap-4 p-4 border border-gray-100 rounded-lg hover:bg-[#f25811]/5 transition duration-300">
+              <div className="w-10 h-10 bg-[#f25811]/10 rounded-full flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-red-600"
+                  className="h-6 w-6 text-[#f25811]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -70,18 +70,18 @@ const ContactPage = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-medium text-lg">
+                <h3 className="font-medium text-lg text-[#191f5d]">
                   Human Resources Department
                 </h3>
-                <p className="text-gray-600"> Mount Litera Zee School</p>
+                <p className="text-gray-600">Shree Padmakshi Global School</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 p-4 border border-gray-100 rounded-lg hover:bg-red-50 transition duration-300">
-              <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+            <div className="flex items-center gap-4 p-4 border border-gray-100 rounded-lg hover:bg-[#f25811]/5 transition duration-300">
+              <div className="w-10 h-10 bg-[#f25811]/10 rounded-full flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-red-600"
+                  className="h-6 w-6 text-[#f25811]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -101,18 +101,18 @@ const ContactPage = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-medium text-lg">Mount Litera Zee School</h3>
+                <h3 className="font-medium text-lg text-[#191f5d]">Shree Padmakshi Global School</h3>
                 <p className="text-gray-600">
-                  Uslapur, Bilaspur C.G., Bilaspur, Pincode- 495001.
+                  near over bridge, Uslapur, Bilaspur C.G., Pincode- 495001.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 p-4 border border-gray-100 rounded-lg hover:bg-red-50 transition duration-300">
-              <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+            <div className="flex items-center gap-4 p-4 border border-gray-100 rounded-lg hover:bg-[#f25811]/5 transition duration-300">
+              <div className="w-10 h-10 bg-[#f25811]/10 rounded-full flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-red-600"
+                  className="h-6 w-6 text-[#f25811]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -126,10 +126,10 @@ const ContactPage = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-medium text-lg">
-                  Mlzs.bilaspur@mountlitera.com
+                <h3 className="font-medium text-lg text-[#191f5d]">
+                  spgsbilaspur@gmail.com
                 </h3>
-                <p className="text-gray-600">9406430027,9424130028</p>
+                <p className="text-gray-600">9111777295, 9424130028</p>
               </div>
             </div>
           </div>
@@ -138,7 +138,7 @@ const ContactPage = () => {
         {/* Right Column - Modern Contact Form */}
         <div className="lg:w-1/2">
           <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
-            <div className="p-8 bg-gradient-to-r from-red-500 to-red-600">
+            <div className="p-8 bg-gradient-to-r from-[#f25811] to-[#f25811]">
               <h2 className="text-3xl font-bold text-white mb-2">Send a Message</h2>
               <p className="text-white text-opacity-80">
                 Fill out the form and we'll get back to you within 24 hours.
@@ -234,7 +234,7 @@ const ContactPage = () => {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-3 rounded-lg hover:from-red-700 hover:to-red-800 transition duration-300 transform hover:-translate-y-1 hover:scale-105 shadow-lg"
+                className="w-full bg-gradient-to-r from-[#f25811] to-[#f25811] text-white py-3 rounded-lg hover:from-red-700 hover:to-red-800 transition duration-300 transform hover:-translate-y-1 hover:scale-105 shadow-lg"
               >
                 Send Message
               </button>
