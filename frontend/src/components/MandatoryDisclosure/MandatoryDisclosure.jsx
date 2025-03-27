@@ -411,6 +411,7 @@ const SchoolPortal = () => {
                     target="_blank"
                     rel="noreferrer noopener"
                     >sgs</a>
+                    console.log(setDocuments);
                   </div>
                 </div>
               ))}
