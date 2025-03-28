@@ -1,14 +1,8 @@
 import React, { useState } from 'react'
-import { LogOut} from "lucide-react"
 import Logo from '../../assets/Media.jpg';
-import { Menu, X, Calendar, Bell, User } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import NoticeForm from './NoticeForm';
-import EventForm from './EventForm';
-import GalleryForm from './GalleryForm';
-import HolidayForm from './HolidayForm';
+import {  Calendar, Bell, User } from 'lucide-react';
 import { LogOut, Menu, X } from "lucide-react"
-import Logo from '../../assets/logo.jpg';
+// import Logo from '../../assets/logo.jpg';
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoMdNotifications } from "react-icons/io";
 import { MdPhotoLibrary } from "react-icons/md";
