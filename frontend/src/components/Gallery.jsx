@@ -54,8 +54,8 @@ const Gallery = () => {
         ) : error ? (
           <p className="text-center text-red-500">{error}</p>
         ) : (
-          images.map((card) => (
-            <div key={card?._id} className="relative overflow-hidden bg-amber-600">
+          images.map((card,i) => (
+            <div key={i} className="relative overflow-hidden bg-amber-600">
               <motion.div
                 onClick={() => handleClick(card)}
                 className={cn(
