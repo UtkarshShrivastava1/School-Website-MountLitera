@@ -51,6 +51,7 @@ import AdminLogin from './pages/Admin/AdminLogin';
 import AdminDasboard from './pages/Admin/AdminDasboard';
 import Terms from './pages/Terms&Policy/Terms&Conditions';
 import Policy from './pages/Terms&Policy/PrivacyPolicy';
+import GalleryDashboard from './pages/Admin/GalleryDashboard';
 
 function App() {
   return (
@@ -113,6 +114,7 @@ function AppContent() {
         <Route path="/mandatory-disclosure" element={<MandatoryDisclosure />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDasboard />} />
+        <Route path="/admin/gallery-dashboard" element={<GalleryDashboard />} />
         <Route path="/school-calendar" element={<SchoolCalendar />} />
         <Route path="/school-notifications" element={<SchoolNotification />} />
         <Route path="/terms" element={<Terms />} />
