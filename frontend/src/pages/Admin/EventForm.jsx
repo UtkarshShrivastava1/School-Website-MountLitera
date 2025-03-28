@@ -33,11 +33,12 @@ const EventForm = () => {
 
   return (
     <div className="max-w-md mx-auto mt-10 p-5  border-gray-300 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-5 text-center">Create Event</h2>
+      <h2 className="text-3xl font-bold mb-2  text-center">Create Event</h2>
+      <hr className='text-gray-400 mb-2'/>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">
-            Title
+            Title:
           </label>
           <input
             type="text"
@@ -50,7 +51,7 @@ const EventForm = () => {
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
-            Description
+            Description:
           </label>
           <textarea
             id="description"
@@ -63,7 +64,7 @@ const EventForm = () => {
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="date">
-            Date
+            Date:
           </label>
           <input
             type="date"

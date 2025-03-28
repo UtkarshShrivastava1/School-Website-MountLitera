@@ -30,7 +30,6 @@
 //   createPost
 // );
 
-// // ... rest of your routes ...
 
 // module.exports = router;
 const express = require('express');

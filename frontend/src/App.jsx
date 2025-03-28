@@ -52,6 +52,9 @@ import AdminDasboard from './pages/Admin/AdminDasboard';
 import Director_1_Message from './pages/About/Director_1Message';
 // import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import Terms from './pages/Terms&Policy/Terms&Conditions';
+import Policy from './pages/Terms&Policy/PrivacyPolicy';
+import GalleryDashboard from './pages/Admin/GalleryDashboard';
 
 function App() {
   return (
@@ -115,8 +118,11 @@ function AppContent() {
         <Route path="/mandatory-disclosure" element={<MandatoryDisclosure />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDasboard />} />
+        <Route path="/admin/gallery-dashboard" element={<GalleryDashboard />} />
         <Route path="/school-calendar" element={<SchoolCalendar />} />
         <Route path="/school-notifications" element={<SchoolNotification />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/policy" element={<Policy />} />
       </Routes>
       {!isAdminRoute && <Footer />}
     </>

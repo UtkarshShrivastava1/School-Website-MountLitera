@@ -20,6 +20,7 @@ import Testimonial from '../../components/Home/Testimonial'
 
 import Calendar from '../../components/Home/Calendar'
 import Testimonials from '../../components/Home/Testimonial'
+import TestimonialSlider from '../../components/Home/Testimonial'
 
 
 const Home = () => {
