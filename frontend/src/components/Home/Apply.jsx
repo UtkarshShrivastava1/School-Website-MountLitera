@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 
 const SchoolTourSection = () => {
   const [isHovered, setIsHovered] = useState(false);
